@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta name="viewport" content="width=320; user-scalable=no" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>PhoneGap</title>
+	<link rel="stylesheet" href="master.css" type="text/css" media="screen"
+		title="no title">
+	<script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
+	<script type="text/javascript" charset="utf-8" src="ownmain.js"></script>
+	<script type="text/javascript">
+	function goToNext(){
+		document.location.href = "form.html";
+	}
+	</script>
+</head>
+<body onload="init();" id="stage" class="theme">
+	<h1>Welcome to PhoneGap Demo!</h1>
+	<div id="info">
+		<h4>
+			Width: <span id="width"> &nbsp;</span>, Height: <span id="height">&nbsp;
+			</span>, Color Depth: <span id="colorDepth"></span>
+		</h4>
+	</div>
+	<a href="#" class="btn large" onclick="goToNext();">GoTo Next</a>
+	<a href="#" class="btn large" onclick="insertRecord();">Insert Record</a>
+	<a href="#" class="btn large" onclick="listRecords();">List Records</a>
+</body>
+</html>

@@ -1,0 +1,78 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    
+}
+
+#viewPort {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.dx-theme-win8 .split-layout.page {
+    display: -ms-grid;
+    -ms-grid-columns: 620px minmax(min-content, 1fr);
+    -ms-grid-rows: 104px 1fr 100px;
+    overflow: hidden;
+}
+
+.dx-theme-win8 .split-layout .layout-header {
+    -ms-grid-column: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    padding: 60px 120px;
+}
+
+.dx-theme-win8 .split-layout .layout-header .dx-toolbar {
+    margin-left: -63px;
+}
+
+.dx-theme-win8 .split-layout .layout-header .dx-toolbar-center {
+    margin: 10px 0 0 70px;
+    text-align: left;
+}
+
+.dx-theme-win8 .split-layout .layout-header .dx-toolbar-right {
+    margin: 10px 120px 0 0;
+}
+
+.dx-theme-win8 .split-layout .left-content {
+    -ms-grid-column: 1; 
+    -ms-grid-row: 2;
+    padding: 60px 0 0 120px;
+}
+
+.dx-theme-win8 .split-layout .right-content {
+    -ms-grid-column: 2; 
+    -ms-grid-row: 2;
+    padding: 60px 0 0 0;
+}
+
+.dx-theme-win8 .split-layout .right-content .content {
+    margin-left: 40px;
+}
+
+.dx-theme-win8 .split-layout .left-footer {
+    -ms-grid-column: 1; 
+    -ms-grid-row: 3; 
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.dx-theme-win8 .split-layout .right-footer {
+    -ms-grid-column: 2; 
+    -ms-grid-row: 3; 
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.dx-theme-win8 .split-layout .left-footer .dx-toolbar,
+.dx-theme-win8 .split-layout .right-footer .dx-toolbar {
+}
+
+.dx-theme-win8 .content, .dx-theme-win8 .content>div {
+    height: 100%;
+    position: relative;
+}

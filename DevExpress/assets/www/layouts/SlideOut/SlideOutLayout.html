@@ -1,0 +1,54 @@
+﻿<div data-dx-role="layout" data-dx-name="slideout" data-dx-platform="ios" class="page dx-black-background" data-dx-controller="slideout">
+
+    <div class="dx-navigation-list">
+        <div data-bind="dxList: { items: [ ] }" data-dx-command-container="navigation: { }">
+            <div data-dx-role="template" data-dx-name="item">
+                <div data-bind="click: click">
+                    <!--img class="icon" src="Content/images/flight.png"-->
+                    <div class="dx-navigation-item" data-bind="text: title"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="layout-frame dx-content-background">
+        <div class="layout-header dx-theme-ios dx-toolbar" data-dx-placeholder="header" data-dx-transition="none">
+            <div data-bind="dxToolbar: { items: [{ text: title, align: 'center' }]}" class="layout-toolbar" data-dx-command-container="menu: { showText: false }, back: { showIcon: false }, cancel: { showIcon: false }, create: { showText: false }, edit: { showIcon: false }, save: { showIcon: false }" data-dx-left-locations="menu;back;cancel" data-dx-right-locations="create;edit;save">
+            </div>
+        </div>
+
+        <div class="layout-content" data-dx-placeholder="content" data-dx-transition="slide"></div>
+
+    </div>
+
+    <div data-dx-target-placeholder="view-footer" class="view-footer">
+        <div data-bind="dxToolbar: { }" class="view-toolbar-bottom" data-dx-command-container="delete: { showIcon: false }" data-dx-left-locations="delete"></div>
+    </div>
+
+</div>
+
+<div data-dx-role="layout" data-dx-name="slideout" data-dx-platform="android" class="page dx-black-background" data-dx-controller="slideout">
+
+    <div class="dx-navigation-list">
+        <div data-bind="dxList: { items: [] }" data-dx-command-container="navigation: { }">
+            <div data-dx-role="template" data-dx-name="item">
+                <div data-bind="click: click">
+                    <!--img class="icon" src="Content/images/flight.png"-->
+                    <div class="dx-navigation-item" data-bind="text: title"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="layout-frame dx-content-background">
+        <div class="layout-header dx-toolbar" data-dx-placeholder="header" data-dx-transition="none">
+            <div data-bind="dxToolbar: { items: [{ text: title, align: 'center' }]}" class="layout-toolbar" data-dx-command-container="menu: { showText: false }, create: { showText: false }, edit: { showText: false }" data-dx-left-locations="menu" data-dx-right-locations="create;edit">
+            </div>
+        </div>
+
+        <div class="layout-content" data-dx-placeholder="content" data-dx-transition="slide"></div>
+
+        <div data-bind="dxToolbar: { items: []}" class="layout-toolbar-bottom" data-dx-command-container="save: { showIcon: false }, cancel: { showIcon: false }, delete: { showText: false }" data-dx-left-locations="save" data-dx-right-locations="cancel"></div>
+    </div>
+
+</div>

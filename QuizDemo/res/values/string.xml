@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="main_username">Username</string>
+    <string name="main_password">Password</string>
+    <string name="main_submit">Submit</string>
+    
+    <string name="second_name">Name</string>
+    <string name="second_number">Number</string>
+    <string name="second_add">Add Details</string>
+    <string name="second_show">Show Details</string>
+</resources>

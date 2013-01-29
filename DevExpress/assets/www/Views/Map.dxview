@@ -1,0 +1,15 @@
+﻿<div data-dx-role="view" data-dx-name="Map" data-dx-layout="default">
+    
+    <div data-dx-target-placeholder="header">
+        <div data-bind="dxToolbar: { items: [
+            { align: 'left', widget: 'button', options: { type: 'back', text: 'Trip', click: backAction } },
+            { align: 'right', widget: 'button', options: { text: 'Edit', click: editMap } },
+            { align: 'center', text: 'Map' }   
+        ]}"></div>
+    </div>
+
+    <div data-dx-target-placeholder="content" class="view-content">
+        <div class="map" data-bind="dxMaps: { markers: markers, routes: routes }"></div>
+    </div>
+
+</div>

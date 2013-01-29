@@ -1,0 +1,25 @@
+﻿<div data-dx-role="view" data-dx-name="MyTrips" data-dx-layout="default">
+
+    <div data-dx-target-placeholder="header">
+        <div data-bind="dxToolbar: { items: [
+            { align: 'left', widget: 'button', options: { type: 'back', text: 'Home', click: '#Index' } },
+            { align: 'right', widget: 'button', options: { iconSrc: 'images/add.png', click: DXTravel.notImplemented } },
+            { align: 'center', text: 'My Trips' }
+        ]}"></div>
+    </div>
+
+    <div data-dx-target-placeholder="content">
+        <div class="my-trips-list view-content" data-bind="dxList: { grouped: true, items: groupedTrips }">
+            <div data-dx-name="item" data-dx-role="template" data-bind="dxAction: '#TripDetails/{id}'">
+                <div class="trip-icon">
+                    <img src="images/flight.png" width="50" height="50" />
+                </div>
+                <div class="trip-info">           
+                    <div class="trip-title" data-bind="text: title"></div>
+                    <div class="trip-period" data-bind="text: dates"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

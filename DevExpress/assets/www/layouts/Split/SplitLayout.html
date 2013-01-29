@@ -1,0 +1,21 @@
+﻿<div data-dx-role="layout" data-dx-name="split" class="page split-layout" data-dx-controller="split">
+    <div class="layout-header" data-dx-placeholder="header">
+        <div data-bind="dxToolbar: { items: [{ text: title, align: 'center' }] }" data-dx-command-container="back: { showText: false }" data-dx-left-locations="back">
+        </div>
+    </div>
+
+    <div class="left-content">
+    </div>
+
+    <div class="right-content">
+        <div class="content" data-dx-placeholder="content" data-dx-transition="none">
+        </div>
+    </div>
+
+    <div class="left-footer" data-dx-placeholder="footer" data-dx-transition="none">
+    </div>
+
+    <div class="right-footer" data-dx-placeholder="footer" data-dx-transition="none">
+        <div class="footer-toolbar" data-bind="dxToolbar: { }" data-dx-command-container="create: { }, cancel: { }, edit: { }, save: { }, delete: { }" data-dx-left-locations="create" data-dx-right-locations="edit;cancel;save;delete"></div>
+    </div>
+</div>

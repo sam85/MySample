@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>DevExpress</title>
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript"  src="knockout-2.1.0.js"></script>
+<script type="text/javascript"  src="globalize.js"></script>
+<script type="text/javascript" 	src="dxtreme.core-12.2.js"></script>
+<script type="text/javascript" src="dxtreme.viz-12.2.js"></script>
+<script>
+	$(document).ready(function() {
+		$("#chartContainer").dxChart(chartOptions);
+	});
+</script>
+<script>
+	chartOptions = {
+    commonSeriesSettings: {
+        argumentField: 'year'
+    },
+    series: [{
+        name: 'Oceania',
+        valueField: 'Oceania'
+    }, {
+        name: 'Africa',
+        valueField: 'Africa'
+    }, {
+        name: 'Americas',
+        valueField: 'Americas'
+    }, {
+        name: 'Asia',
+        valueField: 'Asia'
+    }, {
+        name: 'Europe',
+        valueField: 'Europe'
+    }],
+    dataSource: [
+    {
+        year: 1950, Africa: 227, Americas: 331,
+        Asia: 1436, Europe: 547, Oceania: 12
+    },
+    {
+        year: 1960, Africa: 285, Americas: 416,
+        Asia: 1718, Europe: 605, Oceania: 15
+    },
+    {
+        year: 1970, Africa: 365, Americas: 512,
+        Asia: 2156, Europe: 657, Oceania: 19
+    },
+    {
+        year: 1980, Africa: 478, Americas: 612,
+        Asia: 2644, Europe: 695, Oceania: 22
+    },
+    {
+        year: 1990, Africa: 633, Americas: 720,
+        Asia: 3180, Europe: 722, Oceania: 26
+    },
+    {
+        year: 2000, Africa: 810, Americas: 833,
+        Asia: 3678, Europe: 731, Oceania: 30
+    },
+    {
+        year: 2010, Africa: 1016, Americas: 936,
+        Asia: 4149, Europe: 728, Oceania: 35
+    }]
+}
+</script>
+<Body>
+	<div id="chartContainer" style="height: 100%"
+		data-bind="dxChart: chartOptions"></div>
+</Body>
+</html>

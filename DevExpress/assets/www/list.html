@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>DevExpress</title>
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript"  src="knockout-2.1.0.js"></script>
+<script type="text/javascript"  src="globalize.js"></script>
+<script type="text/javascript" 	src="dxtreme.core-12.2.js"></script>
+<script type="text/javascript" src="dxtreme.viz-12.2.js"></script>
+<script type="text/javascript" >
+	$(document).ready(function() {
+		alert("hy");
+		var localStore = new DevExpress.data.LocalStore({
+			  key: "id",
+			  name: "myApplicationMessages",
+			  immediate: false,
+			  flushInterval: 7000
+			});
+		localStore.insert({ name: "Josh", age: 29 }).done(onInsert);
+		function onInsert(createdPerson, personKey) {
+		    alert("created an object with the '" + personKey + "' key");
+		    localStore.load().done(onLoad);
+		};
+		
+		function onLoad(result) {
+		    alert("loaded " + result.length + " object(s) " + result[0].name  + "  "+  result[0].age );
+		    
+		};
+		
+	});
+</script>
+<script>
+showItemText = function(e) {
+    alert("Clicked " + e.itemData);
+};         
+var groups = [
+  {
+    key: "Marketing",
+    items: [ "Almas Basinger", "Anthony Peterson" ]
+  },
+  {
+    key: "Operations",
+    items: [ "Dora Crimmins", "Anita Andrews" ]
+  }
+];
+}
+</script>
+<body>
+	
+</body>
+</html>

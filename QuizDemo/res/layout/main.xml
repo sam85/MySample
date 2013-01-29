@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bkground" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+         android:layout_marginTop="20dp"
+          android:layout_marginLeft="10dp"
+        android:layout_weight="0.60"      
+        android:orientation="vertical" >
+        
+        <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/txtQuestion_FirstPart"
+            style="@style/Que_Header_Font"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginLeft="20dp" />
+
+        <TextView
+            android:id="@+id/txtOperator"
+            style="@style/Que_Header_Font"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" />
+
+        <TextView
+            android:id="@+id/txtQuestion_SecondPart"
+            style="@style/Que_Header_Font"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" />
+
+        <TextView
+            android:id="@+id/txtQuestion_equal"
+            style="@style/Que_Header_Font"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" />
+
+        <TextView
+            android:id="@+id/txtAnswer"
+            style="@style/Que_Header_Font"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" />
+    </LinearLayout>
+        <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/txtMessage"
+        style="@style/Que_Header_Font"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp" />
+    </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relLayout"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.40"
+        android:gravity="center_horizontal|center_vertical" >
+
+        <RelativeLayout
+            android:id="@+id/relLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp" >
+
+            <TextView
+                android:id="@+id/txtOption1"
+                style="@style/Que_Header_Options"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true" />
+
+            <TextView
+                android:id="@+id/txtOption2"
+                style="@style/Que_Header_Options"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_toLeftOf="@+id/txtOption1" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relLayout1"
+            android:layout_marginRight="35dp"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:id="@+id/txtOption3"
+                style="@style/Que_Header_Options"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true" />
+
+            <TextView
+                android:id="@+id/txtOption4"
+                style="@style/Que_Header_Options"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_toLeftOf="@+id/txtOption3" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

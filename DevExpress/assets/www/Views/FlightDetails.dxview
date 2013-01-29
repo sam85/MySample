@@ -1,0 +1,26 @@
+﻿<div data-dx-role="view" data-dx-name="FlightDetails" data-dx-layout="default">
+
+    <div data-dx-target-placeholder="header">
+        <div data-bind="dxToolbar: { items: [
+            { align: 'left', widget: 'button', options: { type: 'back', text: 'Trip', click: backAction }},
+            { align: 'right', widget: 'button', options: { text: 'Edit', click: editFlight } },
+            { align: 'center', text: 'Flight Info' }
+        ]}"></div>
+    </div>
+
+    <div data-dx-target-placeholder="content">
+        <div class="flight-details view-content" data-bind="dxList: { items: details, grouped: true, itemClick: handleItemClick }">
+            <div data-dx-name="item" data-dx-role="template">
+                <div data-bind="css: { 'flight-details-item-with-navigation': navigation }">                
+                    <div class="flight-details-icon">
+                        <img data-bind="attr: { src: icon }" width="50" height="50" />
+                    </div>
+                    <div class="flight-details-field">
+                        <span class="flight-details-key" data-bind="text: key"></span>
+                        <span class="flight-details-value" data-bind="text: value"></span>                   
+                    </div>
+                </div>
+            </div>            
+        </div>        
+    </div>
+</div>

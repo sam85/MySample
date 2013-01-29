@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>DevExpress</title>
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript"  src="knockout-2.1.0.js"></script>
+<script type="text/javascript"  src="globalize.js"></script>
+<script type="text/javascript" 	src="dxtreme.core-12.2.js"></script>
+<script type="text/javascript" src="dxtreme.viz-12.2.js"></script>
+<script>
+	$(document).ready(function() {
+		$("#rangeSelectorContainer").dxRangeSelector(rangeSelectorOptions);
+	});
+</script>
+<script>
+var clientWidth = $('#rangeSelectorContainer').width();
+rangeSelectorOptions = {
+	    selectedRangeChanged: function (selectedRange) {
+	        $('#selectionSpan').html('SelectedRange: (' +
+	            Globalize.format(selectedRange.startValue, 't') +
+	            ', ' + Globalize.format(selectedRange.endValue, 't') + ')');
+	    },
+	    background: {
+	        image: {                            
+	            url: 'Content/images/RangeImage.png',
+	            location: 'full'
+	        }
+	    },
+	    scale: {
+	        startValue: new Date(2012, 8, 29, 00, 00, 00),
+	        endValue: new Date(2012, 8, 29, 24, 00, 00),
+	        majorTickInterval: 'hour',
+	        showMarkers: false,
+	        placeholderHeight: 20,
+	        label: { format: 'shortTime' }
+	    },
+	    selectedRange: {
+	        startValue: new Date(2012, 8, 29, 11, 00, 00),
+	        endValue: new Date(2012, 8, 29, 17, 00, 00),
+	    },
+	    sliderMarker: {
+	        sliderMarker: {format: 'shortTime'},
+	        placeholderSize: {
+	            width: 65,
+	            height: 30
+	        }
+	    },
+	    margin: {
+	        top: 0,
+	        bottom: 0,
+	        left: 0,
+	        right: 0
+	    },
+	    size: {
+	        height: 150
+	    }
+	}
+</script>
+<Body>
+	<div id="rangeSelectorContainer" data-bind="dxRangeSelector: rangeSelectorOptions"></div>
+</Body>
+</html>

@@ -1,0 +1,29 @@
+﻿<div data-dx-role="view" data-dx-name="TripDetails" data-dx-layout="default">
+
+    <div data-dx-target-placeholder="header">
+        <div data-bind="dxToolbar: { items: [
+            { align: 'left', widget: 'button', options: { type: 'back', text: 'Trips', click: '#MyTrips' } },
+            { align: 'right', widget: 'button', options: { text: 'Edit', click: editTrip } },
+            { align: 'center', text: trip().title }
+        ]}"></div>
+    </div>
+
+    <div data-dx-target-placeholder="content">
+        <div class="trip-details-list view-content" data-bind="dxList: { items: trip().detailItems, grouped: true }">
+            <div data-dx-name="item" data-dx-role="template" data-bind="dxAction: action">
+                <div data-bind="attr: { 'class': stageCss }">
+                    <div class="trip-details-icon">
+                        <img data-bind="attr: { src: icon }" width="50" height="50" />
+                    </div>
+                    <div class="trip-details-info">
+                        <div class="trip-details-title" data-bind="text: title"></div>
+                        <div class="trip-details-time">
+                            <span data-bind="text: timeString"></span>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

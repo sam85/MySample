@@ -1,0 +1,130 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+.layout-content div[data-dx-target-placeholder] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+html, body {
+}
+
+.page {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.layout-header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 40px;
+}
+
+.layout-content {
+    position: absolute;
+    top: 40px;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.view-content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.layout-frame {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.layout-frame,
+.layout-frame .layout-header,
+.layout-frame .layout-header .dx-toolbar {
+    border-radius: 4px 4px 0 0;
+}
+
+
+/* navigation */
+
+.dx-navigation-list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.layout-toolbar-bottom,
+.view-toolbar-bottom {
+    display: none;
+}
+
+
+/* iOS */
+
+.dx-theme-ios div[data-dx-target-placeholder].view-footer {
+    position: static;
+}
+
+.dx-theme-ios .dx-navigation-list .dx-list {
+    background: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    min-height: 0;
+}
+
+.dx-theme-ios .dx-navigation-list .dx-list .dx-list-item {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+    color: #E8EEF4;
+    text-shadow: 0 1px rgba(48, 48, 48, .6);
+    font-size: 14pt;
+}
+
+.dx-theme-ios .view-toolbar-bottom.dx-toolbar {
+    background: transparent;
+    border: none;
+}
+
+.dx-theme-ios .view-toolbar-bottom {
+    margin-bottom: 10px;
+}
+
+.dx-theme-ios .view-toolbar-bottom.dx-toolbar .dx-toolbar-left {
+    right: 0;
+}
+
+.dx-theme-ios .view-toolbar-bottom.dx-toolbar .dx-toolbar-left .dx-button {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+}
+
+.dx-theme-ios .layout-content {
+    top: 43px;
+}
+
+
+/* Android */
+
+.dx-theme-android .layout-content.has-toolbar-bottom {
+    bottom: 43px;
+}
+
+.dx-theme-android .dx-toolbar.layout-toolbar-bottom {
+    position: absolute;
+    bottom: 0;
+}
+
+.dx-theme-android .layout-content {
+    top: 42px;
+}

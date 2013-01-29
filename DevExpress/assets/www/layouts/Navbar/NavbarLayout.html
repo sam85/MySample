@@ -1,0 +1,55 @@
+﻿<div data-dx-role="layout" data-dx-name="navbar" data-dx-platform="ios" class="page">
+
+    <div class="layout-header" data-dx-placeholder="header" data-dx-transition="none">
+        <div
+                data-bind="dxToolbar: { items: [ { text: title, align: 'center' } ] }"
+                data-dx-command-container="back: { showIcon: false }, cancel: { showIcon: false }, create: { showText: false }, edit: { showIcon: false }, save: { showIcon: false }"
+                data-dx-left-locations="back;cancel"
+                data-dx-right-locations="create;edit;save">
+        </div>
+    </div>
+
+    <div class="layout-content" data-dx-placeholder="content" data-dx-transition="slide"></div>
+    
+    <div class="layout-footer" data-dx-placeholder="footer">
+        <div id="navBar" data-bind="dxNavBar: { }" data-dx-command-container="navigation: { }">        
+        </div>
+    </div>
+
+    <div data-dx-target-placeholder="view-footer" class="view-footer">
+        <div data-bind="dxToolbar: { }" class="view-toolbar-bottom" data-dx-command-container="delete: { showIcon: false }" data-dx-left-locations="delete"></div>
+    </div>
+    
+</div>
+
+
+<div data-dx-role="layout" data-dx-name="navbar" data-dx-platform="android" class="page">
+
+    <div class="layout-header" data-dx-placeholder="header">
+        <div id="navBar" data-bind="dxNavBar: { }" data-dx-command-container="navigation: { }">        
+        </div>
+    </div>
+
+    <div class="layout-content" data-dx-placeholder="content" data-dx-transition="slide"></div>
+    
+    <div class="layout-footer" data-dx-placeholder="footer">
+        <div
+            data-bind="dxToolbar: { }"
+            data-dx-command-container="create: { showText: false }, edit: { showText: false }, delete: { showText: false }, save: { showIcon: false }, cancel: { showIcon: false }"
+            data-dx-left-locations="edit;save"
+            data-dx-right-locations="delete;cancel">
+        </div>
+    </div>
+    
+</div>
+
+
+<div data-dx-role="layout" data-dx-name="navbar" data-dx-platform="win8" class="page">
+    <div class="layout-header" data-dx-placeholder="header">
+        <h1 data-bind="text: title"></h1>
+        <div id="navBar" data-bind="dxNavBar: { }" data-dx-command-container="navigation: { showIcon: false }"></div>
+    </div>
+    <div class="layout-content-wrapper">
+        <div class="layout-content" data-dx-placeholder="content" data-dx-transition="none"></div>
+    </div>
+</div>

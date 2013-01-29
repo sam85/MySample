@@ -1,0 +1,264 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    
+}
+
+.dx-theme-ios-typography {
+    background: white !important;
+}
+
+.dx-list-item.dx-state-active {
+    background: #fcb573 !important;
+}
+
+
+/* Layout */
+body {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.page {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.layout-header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 44px;
+}
+
+*[data-dx-target-placeholder] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.layout-content {
+    position: absolute;
+    top: 44px;
+    bottom: 52px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.layout-footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 52px;
+}
+
+.view-content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+}
+
+
+/* Home */
+.home-view {
+    background: url(../images/airliner-background.jpg) no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    padding: 25px 5px 0 5px;
+    top: 0;
+}
+
+.home-next-trip {
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+.home-next-trip .trip-icon {
+    padding: 15px;
+    display: inline-block;
+}
+
+.home-next-trip .trip-icon img {
+}
+
+.home-next-trip .trip-info {
+    display: inline-block;
+}
+
+.home-next-trip .trip-header {
+    text-transform: uppercase;
+    color: #F7941E;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.home-next-trip .trip-title {
+    font-size: 1.5em; 
+}
+
+.home-next-trip .trip-period {
+    font-size: 1em;
+    font-weight: normal;
+}
+
+.home-menu,
+.home-next-trip
+ {
+    background: transparent !important;
+}
+
+.home-menu .dx-list-item,
+.home-next-trip .dx-list-item
+{
+    border: none !important;
+}
+
+.home-menu-item {
+    cursor: pointer;
+}
+
+.home-menu-item-icon {
+    display: inline-block;
+}
+
+.home-menu-item-icon img {
+    width: 35px;
+    height: 35px;
+}
+
+.home-menu-item-text {
+    display: inline-block;
+    position: relative;
+    top: -7px;
+    left: 10px;
+    color: #444;
+    font-size: 1.5em;
+}
+
+
+/* MyTrips */
+.my-trips-list {
+
+}
+
+.my-trips-list .trip-icon {
+    display: inline-block;
+}
+
+.my-trips-list .trip-info {
+    display: inline-block;
+}
+
+.my-trips-list .trip-title {
+    font-weight: bold;
+}
+
+.my-trips-list .trip-period {
+    font-size: 0.75em; 
+    font-weight: normal;
+}
+
+
+/* Trip Details */
+.trip-details {
+}
+
+.trip-details-list {
+
+}
+
+.trip-details-list .trip-details-title {
+    max-width: 250px;
+    white-space: normal;
+}
+
+.trip-details-list.dx-list .dx-list-item {
+    font-size: 1.1em;    
+}
+
+.trip-details-list.dx-list .trip-details-title {
+    font-weight: bold;
+}
+
+.trip-details-list .trip-details-icon {
+    display: inline-block;
+    padding: 0 5px;
+    vertical-align: top;
+}
+
+.trip-details-list .trip-details-info {
+    display: inline-block;
+}
+
+.trip-details-item-stage-past {
+    color: #888;
+}
+
+.trip-details-item-stage-current {
+    color: #F7941E;
+}
+
+.trip-details-item-stage-future {
+    color: #000;
+}
+
+.trip-details-list .trip-details-stage {
+    color: #888;
+}
+
+/* Flight */
+.flight-details {
+    
+}
+
+.flight-details.dx-list .dx-list-item {
+    font-size: 1.1em;
+}
+
+.flight-details-icon {
+    display: inline-block;
+}
+
+.flight-details-field {
+    display: inline-block;
+    position: relative;
+    top: -17px;
+}
+
+.flight-details img {
+    width: 50px;
+}
+
+.flight-details .flight-details-field span {
+    vertical-align: middle;
+}
+
+.flight-details .flight-details-item-with-navigation {
+    background: url(../images/forward-arrow.png) no-repeat;
+    background-position: 99% center;
+    background-size: 15px 15px;
+}
+
+.flight-details .flight-details-key {
+}
+
+.flight-details .flight-details-value {
+    font-weight: bold;
+}
+
+.flight-details-buttons {
+    padding: 15px;
+}
+
+/* Map */
+.map {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}

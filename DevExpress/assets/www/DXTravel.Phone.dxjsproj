@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>0e40874f-b781-4221-b170-e971e8eccbec</ProjectGuid>
+    <Name>DXTravel.Phone</Name>
+    <RootNamespace>DXTravel.Phone</RootNamespace>
+    <DebugSitePortNumber>50000</DebugSitePortNumber>
+    <AutoAssignPort>True</AutoAssignPort>
+    <RunInSimulator>True</RunInSimulator>
+    <ApplicationPage>App.html</ApplicationPage>
+    <Connection>True</Connection>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>output\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>output\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="App.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="App.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\DXTravel.Phone.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\dxtreme.android.holo-dark-12.2.css" />
+    <Content Include="css\dxtreme.desktop.default-12.2.css" />
+    <Content Include="css\dxtreme.ios.default-12.2.css" />
+    <Content Include="css\dxtreme.win8.black-12.2.css" />
+    <Content Include="css\dxtreme.win8.white-12.2.css" />
+    <Content Include="css\dxtreme.win8.black.small-12.2.css" />
+    <Content Include="images\add.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\airliner-background.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\app-icon-144.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\app-icon-72.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\bg.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\flight.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\forward-arrow.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\home.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\map.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\marker.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\my-trips.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\my.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\search.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\splash-screen-640x920.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\suggested-trips.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\suggested.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\trip-search.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\dxtreme.core-12.2.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\dxtreme.framework-12.2.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\dxtreme.viz-12.2.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\dxtreme.widgets-12.2.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\globalize.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\jquery-1.7.2.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\knockout-2.1.0.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="layouts\Custom\Layout_Default.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="layouts\Custom\Layout_FullPage.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="layouts\Desktop\DesktopLayout.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="layouts\Desktop\DesktopLayout.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="layouts\Empty\EmptyLayout.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="layouts\Empty\EmptyLayout.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="layouts\Empty\EmptyLayout.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="layouts\Navbar\NavbarLayout.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="layouts\Navbar\NavbarLayout.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="layouts\SlideOut\SlideOutLayout.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="layouts\SlideOut\SlideOutLayout.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="layouts\SlideOut\SlideOutLayout.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="layouts\Split\SplitLayout.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="layouts\Split\SplitLayout.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="layouts\Split\SplitLayout.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="phone.config.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\CheckIn.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\CheckIn.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\FlightDetails.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\FlightDetails.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Index.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Index.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Map.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Map.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\MyTrips.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\MyTrips.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\TripDetails.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\TripDetails.js">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="css\" />
+    <Folder Include="images\" />
+    <Folder Include="js\" />
+    <Folder Include="layouts\" />
+    <Folder Include="layouts\Desktop\" />
+    <Folder Include="layouts\Empty\" />
+    <Folder Include="layouts\Navbar\" />
+    <Folder Include="layouts\Custom" />
+    <Folder Include="layouts\SlideOut\" />
+    <Folder Include="layouts\Split\" />
+    <Folder Include="views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DXTravel.Shared\DXTravel.Shared.dxjsproj">
+      <Name>DXTravel.Shared</Name>
+      <Project>{8dacba63-f069-4a21-a1a2-4b7774256003}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+  <Target Name="Build">
+    <!--
+    <Message Text="'$(MSBuildToolsPath)'"></Message>
+    -->
+    <Message Text="Build JSProject '$(MSBuildProjectFile)':" Importance="high"></Message>
+    <Message Text="Copying refenecses to output dir..." Importance="high" />
+    <MSBuild Targets="Build" Projects="@(ProjectReference)" Properties="OutputPath=$([System.IO.Path]::GetFullPath('$(OutputPath)'))"></MSBuild>
+    <Message Text="Copying files to output dir..." Importance="high" />
+    <Copy SourceFiles="@(Content)" DestinationFiles="@(Content-&gt;'$(OutputPath)%(RelativeDir)%(Filename)%(Extension)')" />
+    <Message Text="Finished Build JSProject '$(MSBuildProjectFile)'." Importance="high"></Message>
+  </Target>
+  <Target Name="CreateManifestResourceNames" Condition="'@(ResxWithNoCulture)@(ResxWithCulture)@(NonResxWithNoCulture)@(NonResxWithCulture)'!=''" />
+  <Target Name="Rebuild" DependsOnTargets="Clean;Build"></Target>
+  <Target Name="Clean">
+    <!--
+    <Message Text="Cleaning Output files..." Importance="high" />
+    <Delete Files="@([System.IO.Path]::GetFullPath('$(OutputPath)'))" />
+    -->
+    <Message Text="Cleaning Output dir ($([System.IO.Path]::GetFullPath('$(OutputPath)')))..." Importance="high" />
+    <RemoveDir Directories="$([System.IO.Path]::GetFullPath('$(OutputPath)'))" />
+  </Target>
+</Project>

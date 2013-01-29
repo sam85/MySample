@@ -1,0 +1,15 @@
+﻿<div data-dx-role="view" data-dx-name="CheckIn" data-dx-layout="default">
+
+    <div data-dx-target-placeholder="header">
+        <div data-bind="dxToolbar: { items: [
+            { align: 'left', widget: 'button', options: { type: 'back', text: 'Flight', click: backAction } },
+            { align: 'right', widget: 'button', options: { text: 'Edit' } },
+            { align: 'center', text: 'Check In' }
+        ]}"></div>
+    </div>
+
+    <div data-dx-target-placeholder="content">
+        <img src="#" data-bind="attr: { src: QRSrc }" width="100%" />
+    </div>
+
+</div>

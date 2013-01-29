@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>DevExpress</title>
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript"  src="knockout-2.1.0.js"></script>
+<script type="text/javascript"  src="globalize.js"></script>
+<script type="text/javascript" 	src="dxtreme.core-12.2.js"></script>
+<script type="text/javascript" src="dxtreme.viz-12.2.js"></script>
+<script>
+	$(document).ready(function() {
+		$("#gaugeContainer").dxCircularGauge(gaugeOptions);		
+	});
+</script>
+<script>
+gaugeOptions = {
+	    scale: {
+	        startValue: -50,
+	        endValue: 50,
+	        majorTick: {
+	            color: 'black',
+	            tickInterval: 10
+	        },
+	        minorTick: {
+	            visible: true,
+	            color: 'black',
+	            tickInterval: 1,
+	        }
+	    },
+	    needles: [{ value: 24, color: 'red' }],
+	    spindle: { color: 'red' },
+	    markers: [{ value: 19, color: 'green' }],
+	    rangeContainer: {
+	        ranges: [{
+	            startValue: -50,
+	            endValue: 0,
+	            color: 'blue'
+	        }, {
+	            startValue: 0,
+	            endValue: 50,
+	            color: 'red'
+	        }
+	        ],
+	        offset: 5
+	    }
+	
+
+}
+</script>
+<Body>
+	<div id="gaugeContainer" style="height:550px" data-bind="dxCircularGauge: gaugeOptions"></div>
+
+</Body>
+</html>

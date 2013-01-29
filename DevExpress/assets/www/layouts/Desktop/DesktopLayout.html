@@ -1,0 +1,31 @@
+﻿<div data-dx-role="layout" data-dx-name="desktop" data-dx-platform="desktop" class="layout">
+    <div class="page">
+        <div class="wrapper">
+            <header>
+                <div class="logo" />
+            </header>
+        </div>
+        <div class="main-menu">
+            <div class="wrapper">
+                <nav id="navBar" data-bind="dxNavBar: { }" data-dx-command-container="navigation: {}"></nav>
+            </div>
+        </div>
+        <div class="toolbar">
+            <div class="wrapper">
+                <div data-bind="dxToolbar: { items: [{ text: title, align: 'left' }]}" data-dx-command-container="create: { showIcon: false }, edit: { showIcon: false }, save: { showIcon: false }, delete: { showIcon: false }, cancel: { showIcon: false }" data-dx-right-locations="create;edit;save;delete;cancel"></div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="content-wrapper">
+                <div class="content" data-dx-placeholder="content" data-dx-transition="none"></div>
+            </div>
+
+            <div class="footer-gap"></div>
+        </div>
+        <footer>
+            <div class="wrapper copyright">
+                2012 © Copyright Text
+            </div>
+        </footer>
+    </div>
+</div>
