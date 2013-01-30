@@ -221,14 +221,37 @@ public class Home extends Activity {
 		txtOption3.setText(String.valueOf(Options.get(2)));
 		txtOption4.setText(String.valueOf(Options.get(3)));
 		
+		OptionsAnimation();
+		ClickEnable();
+
+	}
+	
+	private void OptionsAnimation()
+	{
 		txtOption1.startAnimation(anim_slide_in_up);
 		txtOption2.startAnimation(anim_slide_in_up);
 		txtOption3.startAnimation(anim_slide_in_up);
 		txtOption4.startAnimation(anim_slide_in_up);
-
+	}
+	
+	private void ClickDisable()
+	{
+		txtOption1.setClickable(false);
+		txtOption2.setClickable(false);
+		txtOption3.setClickable(false);
+		txtOption4.setClickable(false);
+	}
+	
+	private void ClickEnable()
+	{
+		txtOption1.setClickable(true);
+		txtOption2.setClickable(true);
+		txtOption3.setClickable(true);
+		txtOption4.setClickable(true);
 	}
 
 	private void CheckAnswer(int Click) {
+		ClickDisable();
 		txtAnswer.setVisibility(View.VISIBLE);
 		int RightAns = Options.get(CorrectAnsPosition);
 		if (Click == 1) {
