@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="#ff000000">
+	
+	<LinearLayout
+		android:orientation="horizontal" 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		>
+		<Button
+			android:id="@+id/imagefilter"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/setimagefilter"
+			android:textSize="14sp" 
+			android:layout_weight="1"
+			android:paddingLeft="1dip"
+			android:paddingRight="1dip"
+			/>
+		<Button
+			android:id="@+id/backgroundimage"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"			 
+			android:text="@string/selectimage"
+			android:textSize="14sp"
+			android:layout_weight="1"
+			android:paddingLeft="1dip"
+			android:paddingRight="1dip"
+			/>
+		<Button
+			android:id="@+id/filterlevel"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"			 
+			android:text="@string/setfilterlevel"
+			android:textSize="14sp"
+			android:layout_weight="1"
+			android:paddingLeft="1dip"
+			android:paddingRight="1dip"
+			/>
+	</LinearLayout>	
+
+		
+    <RelativeLayout 
+        android:id="@+id/imageview_container"
+		android:layout_width="fill_parent"
+		android:layout_height="match_parent">
+	<ImageView
+	    android:id="@+id/imageview_background"
+	    android:layout_width="fill_parent"
+		android:layout_height="match_parent"				
+	    android:background="#FFFFFFFF"
+		android:scaleType="fitXY"/>
+		<ListView
+		     android:id="@+id/filter_list"			  
+		     android:layout_width="150dip"
+		     android:layout_height="match_parent"
+		     android:cacheColorHint="#00000000"
+		     android:dividerHeight="0dp"
+		     android:divider="#00000000"/>
+	</RelativeLayout>
+</LinearLayout>

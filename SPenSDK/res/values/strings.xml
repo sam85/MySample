@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SPenSDK Demo</string>
+    
+    <string name="animation_speed_title">Animation Speed</string>
+
+<!-- Settings -->        
+    <string name="pen_settings">Pen settings</string>
+    <string name="pen_settings_preset_empty">No preset settings</string>
+    <string name="pen_settings_preset_delete_title">Delete</string>
+    <string name="pen_settings_preset_delete_msg">Selected pen preset will be permanently erased</string>
+    <string name="pen_settings_preset_exist">Already exist</string>
+    <string name="pen_settings_preset_maximum_msg">Reached maximum number(12) of preset slot</string>
+    <string name="eraser_settings">Eraser settings</string>
+    <string name="clear_all">Clear all</string> 
+    <string name="text_settings">Text settings</string>
+    <string name="text_settings_tab_font">Font</string>
+    <string name="text_settings_tab_paragraph">Paragraph</string>
+    <string name="text_settings_tab_paragraph_align">Align</string>
+    <string name="textbox_hint">Insert Text</string>
+    <string name="texttitle">enter text here</string>
+    <string name="filling_settings">Filling settings</string>
+    <string name="settingview_close_btn_desc">close</string>
+    <string name="insertcanvasimage">Insert Canvas Image in EditText</string>
+    <string name="settinginformation">Setting Information</string>  
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="nomusic">No music</string>
+    <string name="setimagefilter">Set Image Filter</string>
+    <string name="selectimage">Select Image</string>
+    <string name="setfilterlevel">Set Filter Level</string>
+    <string name="up">▲</string>
+    <string name="left">◀</string>
+    <string name="right">▶</string>
+    <string name="down">▼</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="done">Done</string>
+    <string name="xcoordinates">X coordinates</string>
+    <string name="ycoordinates">Y coordinates</string>
+    <string name="pressure">Pressure</string>
+    <string name="tool">Tool</string>
+    <string name="touch">Touch</string>
+    <string name="hover">Hover</string>
+    <string name="context_identifier">Context identifier</string>
+    
+<!-- Signature -->
+	<string name="signature_start_check_title">[Check signature]</string>
+    <string name="signature_start_check_sub_title">Check whether the registered signature exists or not</string>
+    <string name="signature_start_check_success">Registered signature is existed</string>
+    <string name="signature_start_check_failure">There is no registered signature</string>
+    <string name="signature_start_registration_title">[Registration]</string>
+    <string name="signature_start_registration_sub_title">Start registration</string>
+    <string name="signature_start_verification_title">[Verification]</string>
+    <string name="signature_start_verification_sub_title">Start verification - Signature must be registered</string>
+    <string name="signature_start_verification_failure">There is no registered signature</string>
+    <string name="signature_start_delete_title">[Delete signature]</string>
+    <string name="signature_start_delete_sub_title">Delete the registered signature</string>
+    <string name="signature_start_delete_failure">Registered signature is deleted</string>
+    <string name="signature_start_delete_success">There is no registered signature</string>
+    <string name="signature_registration_registration_title">[Registration]</string>
+    <string name="signature_registration_registration_sub_title">Save your signature to register</string>
+    <string name="signature_registration_registration_success_1">The first signature has been stored</string>
+    <string name="signature_registration_registration_success_2">The Second signature has been stored</string>
+    <string name="signature_registration_registration_success_3">Signature registration is completed</string>
+    <string name="signature_registration_registration_failure">This signature is invalid for registration\nPlease try again!</string>
+    <string name="signature_registration_draw">Draw your signature to register</string>
+    <string name="signature_verification_verification_title">[Verification]</string>
+    <string name="signature_verification_verification_sub_title">Verify the signature</string>
+    <string name="signature_verification_verification_success">Success!</string>
+    <string name="signature_verification_verification_failure">Failure!</string>
+    <string name="signature_verification_level_title">[Verification Level]</string>
+    <string name="signature_verification_level_sub_title">Select verification level</string>
+    <string name="signature_verification_level_low">Low</string>
+    <string name="signature_verification_level_medium">Medium</string>
+    <string name="signature_verification_level_high">High</string>
+    <string name="signature_verification_level_confirm">Confirm</string>
+    <string name="signature_verification_level_cancel">Cancel</string>
+    <string name="signature_verification_draw">Draw your signature to verify</string>
+    <string name="signature_retry_title">[Retry]</string>
+    <string name="signature_retry_sub_title">Clear the screen to redraw signature</string>        
+<!-- User font -->        
+    <string name="user_font_name1">Chococooky</string>
+    <string name="user_font_name2">Rosemary</string>
+    
+<!-- SAMM Option -->    
+	<string name="save_image_horizontal_crop_off">OFF - Do not crop empty space of the left, right side of saving image</string>
+	<string name="save_image_horizontal_crop_on">ON - Crop empty space of the left, right side of saving image</string>
+	<string name="save_image_vertical_crop_off">OFF - Do not crop empty space of the top, bottom side of saving image</string>
+	<string name="save_image_vertical_crop_on">ON - Crop empty space of the top, bottom side of saving image</string>
+	<string name="adjust_saving_contents_by_cropping_off">OFF - Do not adjust contents according to the cropped image</string>
+	<string name="adjust_saving_contents_by_cropping_on">ON - Adjust contents according to the cropped image</string>	
+	<string name="save_only_foreground_image_off">OFF - Save image with its background</string>
+	<string name="save_only_foreground_image_on">ON - Save image with only foreground(transparent background)</string>
+	<string name="create_new_image_off">OFF - Save SAMM data in an exist file</string>
+	<string name="create_new_image_on">ON - Create new image file to save SAMM data</string>
+	<string name="encode_foreground_image_off">OFF - Do not encode foreground image</string>
+	<string name="encode_foreground_image_on">ON - Encode foreground image</string>
+	<string name="encode_thumbnail_image_off">OFF - Do not encode thumbnail image</string>
+	<string name="encode_thumbnail_image_on">ON - Encode thumbnail image</string>
+	
+<!-- Animation Option -->
+	<string name="play_animation_using_trasparent_background_off">OFF - Play animation with its Background</string>	
+	<string name="play_animation_using_trasparent_background_on">ON - Play animation without Background(transparent)</string>
+	<string name="background_audio_play_off">OFF - Turn off the Background audio</string>
+	<string name="background_audio_play_on">ON - Turn on the Background audio</string>
+	<string name="background_audio_auto_replay_off">OFF - Play Background audio once</string>
+	<string name="background_audio_auto_replay_on">ON - Repeat Background audio</string>
+	<string name="background_audio_stop_off">OFF - Play Background audio regardless of animation</string>
+	<string name="background_audio_stop_on">ON - Stop Background audio when animation stop</string>
+	<string name="play_animation_using_sound_effect_off">OFF - Do not use sound effect on Animation</string>
+	<string name="play_animation_using_sound_effect_on">ON - Play animation with sound effect</string>
+
+    <string name="hover_popup_window">The minimal organic design of the Samsung GALAXY S III is reflected in its smooth curves</string>
+</resources>

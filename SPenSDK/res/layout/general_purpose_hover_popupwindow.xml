@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:text="View : Show Tooltip" />
+        <!-- android:textSelectHandleLeft="@drawable/ic_launcher" -->
+
+        <View
+            android:id="@+id/view_tooltip1"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="40dp"
+            android:background="#FFffff00"
+            android:contentDescription="ToolTip" />
+
+        <View
+            android:id="@+id/view_tooltip2"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:background="#FF00ffff" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="30dp"
+            android:background="#FF00ffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="View : Show customized view" />
+
+        <View
+            android:id="@+id/view_user1"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="40dp"
+            android:background="#FFdddddd"
+            android:contentDescription="This Text is from contentDesription" />
+
+        <View
+            android:id="@+id/view_user2"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:background="#FFdddddd"
+            android:contentDescription="This Text is from contentDesription" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="30dp"
+            android:background="#FF00ffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="TextView : Show Full text popup" />
+
+        <TextView
+            android:id="@+id/textview_abbr1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:contentDescription="@string/hover_popup_window"
+            android:singleLine="true"
+            android:text="@string/hover_popup_window"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/textview_abbr2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/hover_popup_window"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:text="@string/hover_popup_window"
+            android:textSize="20dp" />
+
+        <LinearLayout
+            android:id="@+id/viewgroup"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:contentDescription="View Group"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <Button
+                android:id="@+id/viewgroup_btn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:text="B" />
+
+            <TextView
+                android:id="@+id/viewgroup_tv"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:background="#ff550000"
+                android:gravity="center"
+                android:text="Text View" />
+
+            <ImageView
+                android:id="@+id/viewgroup_iv"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#ff0000ee" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="30dp"
+            android:background="#FF00ffff" />
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="ams_strarr_color">
+		<item>Transparent(PNG Format Only)</item>
+		<item>White</item>
+		<item>Black</item>
+		<item>Custom</item>
+	</string-array>
+	<string-array name="set_preference">
+		<item>Normal</item>
+		<item>Favorite</item>	
+		<item>Custom</item>	
+	</string-array>
+	<string-array name="imageoperation">
+		<item>Original</item>
+		<item>Gray</item>
+		<item>Sepia</item>
+		<item>Negative</item>
+		<item>Bright</item>	
+		<item>Dark</item>
+		<item>Vintage</item>
+		<item>Old Photo</item>
+		<item>Faded Color</item>
+		<item>Vignette</item>
+		<item>Vivid</item>
+		<item>Colorize</item>
+		<item>Blur</item>
+		<item>PencilSketch</item>
+		<item>Fusain</item>
+		<item>Pen Sketch</item>
+		<item>Pastel Sketch</item>
+		<item>Color Sketch</item>
+		<item>Pencil Pastel Sketch</item>
+		<item>Pencil Color Sketch</item>
+		<item>Retro</item>
+		<item>SunShine</item>
+		<item>DownLight</item>
+		<item>BlueWash</item>	
+		<item>Nostalgia</item>
+		<item>Yellow Glow</item>	
+		<item>Soft Glow</item>
+		<item>Mosaic</item>
+		<item>Pop Art</item>
+		<item>Magic Pen</item>
+		<item>Oil Paint</item>
+		<item>Posterize</item>
+		<item>Cartoonize</item>
+		<item>Classic</item>	
+	</string-array>
+    
+   	<string-array name="imageoperation_simple">
+		<item>Gray</item>
+		<item>Negative</item>
+		<item>Dark</item>
+		<item>Colorize</item>
+		<item>Blur</item>
+		<item>Pencil Sketch</item>
+		<item>Retro</item>
+		<item>Mosaic</item>
+		<item>Magic Pen</item>
+		<item>Cartoonize</item>	
+	</string-array>	        
+	    
+	<string-array name="backgroundimageoperation">		
+		<item>Gray</item>
+		<item>Sepia</item>
+		<item>Negative</item>
+		<item>Bright</item>	
+		<item>Dark</item>
+		<item>Vintage</item>
+		<item>Old Photo</item>
+		<item>Faded Color</item>
+		<item>Vignette</item>
+		<item>Vivid</item>
+		<item>Colorize</item>
+		<item>Blur</item>
+		<item>Pencil Sketch</item>
+		<item>Fusain</item>
+		<item>Pen Sketch</item>
+		<item>Pastel Sketch</item>
+		<item>Color Sketch</item>
+		<item>Pencil Pastel Sketch</item>
+		<item>Pencil Color Sketch</item>
+		<item>Retro</item>
+		<item>SunShine</item>
+		<item>DownLight</item>
+		<item>BlueWash</item>	
+		<item>Nostalgia</item>
+		<item>Yellow Glow</item>	
+		<item>Soft Glow</item>
+		<item>Mosaic</item>
+		<item>Pop Art</item>
+		<item>Magic Pen</item>
+		<item>Oil Paint</item>
+		<item>Posterize</item>
+		<item>Cartoonize</item>
+		<item>Classic</item>	
+	</string-array>
+    
+	<string-array name="imageoperation_level">
+		<item>Very Small</item>
+		<item>Small</item>
+		<item>Medium</item>
+		<item>Large</item>
+		<item>Very Large</item>
+	</string-array>
+
+	<string-array name="popup_menu_image">
+        <item>Delete</item>
+        <item>Rotate</item>  
+        <item>Copy</item>
+        <item>Cut</item>
+    </string-array>
+    <string-array name="popup_menu_image_with_paste">
+        <item>Delete</item>
+        <item>Rotate</item>  
+        <item>Copy</item>
+        <item>Cut</item>
+        <item>Paste</item>
+        <item>Clear Clipboard</item>
+    </string-array>
+    
+	<string-array name="popup_menu_text">
+        <item>Delete</item>
+        <item>Copy</item>
+        <item>Cut</item>
+	</string-array>	
+    <string-array name="popup_menu_text_with_paste">
+        <item>Delete</item>
+        <item>Copy</item>
+        <item>Cut</item>
+        <item>Paste</item>
+        <item>Clear Clipboard</item>
+    </string-array>
+	
+	<string-array name="popup_menu_else_with_paste">
+        <item>Paste</item>
+        <item>Clear Clipboard</item>
+	</string-array>
+	    
+    <string-array name="load_canvas_size">
+        <item>Fit to Size</item>
+        <item>Fit inside</item>
+        <item>Original</item>  
+    </string-array>
+    <string-array name="load_canvas_halign">
+        <item>Align Left</item>
+        <item>Align Center</item>
+        <item>Align Right</item>  
+    </string-array>
+    <string-array name="load_canvas_valign">
+        <item>Align Top</item>
+        <item>Align Middle</item>
+        <item>Align Bottom</item>  
+    </string-array>
+    
+	<string-array name="save_image_size">
+        <item>Original</item>
+        <item>Medium</item>
+        <item>Compact</item>
+        <item>Thumbnail</item>  
+    </string-array>
+    <string-array name="list_value3">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>  
+    </string-array>
+    
+	<string-array name="save_image_size_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>  
+    </string-array>
+    
+	<string-array name="save_image_quality">
+        <item>Maximum</item>
+        <item>Medium</item>
+        <item>Minimum</item>
+        <item>Original</item>
+    </string-array>
+    
+	<string-array name="save_image_quality_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    
+	<string-array name="animation_speed">
+        <item>Slow</item>
+        <item>Normal</item>
+        <item>Fast</item>
+        <item>Max</item>
+        <item>Auto</item>                
+    </string-array>
+    
+	<string-array name="animation_speed_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>    
+
+	<string-array name="signature_threshold">
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+    </string-array>
+    
+	<string-array name="hover_pointer_style">
+	    <item>Default(none)</item>
+	    <item>Simple Icon</item>
+	    <item>Simple Drawable</item>
+	    <item>S Pen SDK Style</item>
+	    <item>S-Note Style</item>
+	</string-array>
+	
+	<string-array name="side_button_style">
+	    <item>Change Setting</item>
+	    <item>Show Setting View</item>
+	</string-array>
+	
+	<string-array name="context_identifiers">
+	    <item>Recent apps.</item>
+	    <item>Recent apps. on SPen</item>
+	    <item>Recent apps. on earphone</item>
+	    </string-array>
+	    
+</resources>

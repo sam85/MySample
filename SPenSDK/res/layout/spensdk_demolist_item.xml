@@ -1,0 +1,21 @@
+<RelativeLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android" 
+	android:layout_width="fill_parent" 
+	android:layout_height="wrap_content" 
+	android:orientation="horizontal" 
+	android:gravity="left|center"
+	android:paddingLeft="7dp" 
+	android:paddingTop="5dp" 
+	android:paddingBottom="5dp">
+ 
+	<TextView
+	    android:id="@+id/listitemText"
+	    android:layout_width="fill_parent"
+	    android:layout_height="50dip"
+	    android:layout_alignParentLeft="true"
+	    android:ellipsize="end"
+	    android:gravity="left|center"
+	    android:singleLine="false"	    
+	    android:textSize="20sp" />
+ 
+</RelativeLayout>

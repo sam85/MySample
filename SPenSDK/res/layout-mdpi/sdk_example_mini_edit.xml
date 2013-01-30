@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="420dp"
+  android:layout_height="455dp">
+  
+  <LinearLayout 
+  	android:id="@+id/top_layout"
+  	android:layout_width="match_parent"
+  	android:layout_height="wrap_content"
+  	android:orientation="horizontal"
+  	android:layout_alignParentTop="true"
+  	android:layout_marginTop="2dp">
+  	
+  	<ImageView 
+  		android:id="@+id/penSetting_btn"
+  		android:layout_width="match_parent"
+  		android:layout_height="wrap_content"
+  		android:background="@drawable/selector_tool_bg"
+		android:src="@drawable/selector_pen"
+  		android:layout_weight="1"
+  		android:layout_margin="1dip"/>
+  	<ImageView 
+  		android:id="@+id/eraserSetting_btn"
+  		android:layout_width="match_parent"
+  		android:layout_height="wrap_content"
+		android:background="@drawable/selector_tool_bg"
+		android:src="@drawable/selector_eraser"
+  		android:layout_weight="1"
+		android:layout_margin="1dip"/>
+  	<ImageView 
+  		android:id="@+id/undo_btn"
+  		android:layout_width="match_parent"
+  		android:layout_height="wrap_content"
+		android:background="@drawable/selector_tool_bg"
+		android:src="@drawable/selector_undo"
+  		android:layout_weight="1"
+		android:layout_margin="1dip"/>  		
+  	<ImageView 
+  		android:id="@+id/redo_btn"
+  		android:layout_width="match_parent"
+  		android:layout_height="wrap_content"
+		android:background="@drawable/selector_tool_bg"
+		android:src="@drawable/selector_redo"
+		android:layout_weight="1"
+		android:layout_margin="1dip"/>
+
+  </LinearLayout>
+  
+   <LinearLayout 
+   	android:id="@+id/bottom_layout"
+  	android:orientation="horizontal"
+  	android:layout_width="fill_parent"
+  	android:layout_height="wrap_content"
+  	android:layout_alignParentBottom="true"
+  	android:layout_marginTop="2dp">
+  	<Button 
+  		android:id="@+id/done_btn"
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content"
+  		android:layout_weight="1"
+  		android:text="@string/done"/>
+  	<Button 
+  		android:id="@+id/cancel_btn"
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content"
+  		android:layout_weight="1"
+  		android:text="@string/cancel"/>
+  </LinearLayout>
+  <RelativeLayout 
+    android:id="@+id/canvas_container"
+  	android:layout_width="fill_parent"
+  	android:layout_height="fill_parent"
+  	android:layout_below="@id/top_layout"
+  	android:layout_above="@id/bottom_layout">
+	  <com.samsung.spensdk.SCanvasView 
+		android:id="@+id/canvas_view"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:background="#ffffffff"/>
+  </RelativeLayout>  
+</RelativeLayout>

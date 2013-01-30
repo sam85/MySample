@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="match_parent">
+		
+	<LinearLayout
+	    android:id="@+id/tool_menu"
+		android:orientation="horizontal"
+		android:layout_gravity="top|right"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+		
+		<ImageView
+            android:id="@+id/penBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dip"
+            android:layout_weight="1"
+            android:background="@drawable/selector_tool_bg"
+            android:src="@drawable/selector_pen" />
+
+        <ImageView
+            android:id="@+id/eraseBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dip"
+            android:layout_weight="1"
+            android:background="@drawable/selector_tool_bg"
+            android:src="@drawable/selector_eraser" />
+
+        <ImageView
+            android:id="@+id/textBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dip"
+            android:layout_weight="1"
+            android:background="@drawable/selector_tool_bg"
+            android:src="@drawable/selector_text" />
+
+        <ImageView
+            android:id="@+id/fillingBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dip"
+            android:layout_weight="1"
+            android:background="@drawable/selector_tool_bg"
+            android:src="@drawable/selector_filling" />
+
+        <ImageView
+            android:id="@+id/colorPickerBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dip"
+            android:layout_weight="1"
+            android:background="@drawable/selector_tool_bg"
+            android:src="@drawable/selector_colorpicker" />
+
+        <ImageView
+            android:id="@+id/undoBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dip"
+            android:layout_weight="1"
+            android:background="@drawable/selector_tool_bg"
+            android:src="@drawable/selector_undo" />
+
+        <ImageView
+            android:id="@+id/redoBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dip"
+            android:layout_weight="1"
+            android:background="@drawable/selector_tool_bg"
+            android:src="@drawable/selector_redo" />
+	</LinearLayout>	
+<!-- 	
+	<TextView
+		android:id="@+id/settingInfo" 
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:textSize="18sp"
+		android:text= "@string/settinginformation"
+		android:textColor="@android:color/white"
+	/>
+			
+ -->			
+	<FrameLayout 
+		android:id="@+id/layout_container"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_gravity="center">
+		<RelativeLayout 
+			android:id="@+id/canvas_container"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_gravity="center">
+			<ImageView
+				android:id="@+id/canvas_default_background"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:src="@drawable/scanvas_bg"
+				android:scaleType="centerCrop"/>
+		</RelativeLayout>	
+		
+		<RelativeLayout
+		    	android:id="@+id/info_container"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_gravity="center">
+		    <ImageView
+			    android:id="@+id/colorsettingInfo"
+			    android:layout_width="match_parent"
+				android:layout_height="match_parent"				
+				android:scaleType="centerCrop"/>
+		    <TextView
+			android:id="@+id/settingInfo" 
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true"
+			android:gravity="right"
+			android:textSize="18sp"
+			android:text= "@string/settinginformation"
+			android:textColor="@android:color/white"/>
+		</RelativeLayout>		    	
+	</FrameLayout>
+	
+	
+		    
+</LinearLayout>

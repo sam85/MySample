@@ -1,0 +1,63 @@
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+	android:orientation="horizontal">
+	
+	<ListView 
+		android:id="@+id/soundList"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentTop="true"
+		android:layout_above="@+id/sound_ok_cancel"
+   		android:cacheColorHint="#00000000"		
+		android:paddingTop="5dp"
+		android:paddingBottom="5dp"
+		android:paddingLeft="5dp"
+		android:paddingRight="5dp"/>
+    
+    <LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_centerInParent="true"		
+		android:orientation="vertical"
+		android:gravity="center" 
+		android:id="@+id/noItemListMsg"
+		android:visibility="gone">
+		<TextView
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:gravity="center" 
+			android:text="@string/nomusic" 
+			android:textColor="#282828" 
+			android:textSize="24sp" 
+			android:textStyle="bold"/>
+	</LinearLayout>
+    
+    <LinearLayout 
+			android:id="@+id/sound_ok_cancel" 
+			android:layout_width="fill_parent" 
+			android:layout_height="59dip"
+			android:layout_alignParentBottom="true"
+			android:background="#787878"
+			android:orientation="horizontal" 
+			android:paddingTop="6dp">
+		
+				<Button 
+					android:layout_height="50dip" 
+                    android:layout_width="fill_parent" 
+                    android:layout_weight="1"
+		  			android:id="@+id/btnOK" 
+		  			android:text="@string/ok" 
+		  			android:textSize="18sp"/>
+		  
+		 		<Button 
+		 			android:layout_height="50dip" 
+                    android:layout_width="fill_parent" 
+                    android:layout_weight="1"
+		  			android:id="@+id/btnCancel" 
+		  			android:text="@string/cancel" 
+		  			android:textSize="18sp"/>
+		  			  		  
+	</LinearLayout>
+</RelativeLayout>

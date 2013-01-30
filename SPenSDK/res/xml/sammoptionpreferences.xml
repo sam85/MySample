@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2008 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!-- This is a primitive example showing the different types of preferences available. -->
+<PreferenceScreen
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+            android:title="SOptionSAMM">
+         
+        <ListPreference
+                android:key="samm_load_canvas_size"
+                android:title="Load Canvas Size"
+                android:summary="Select Canvas Size Converting Option"
+                android:entries="@array/load_canvas_size"
+                android:entryValues="@array/list_value3"
+                android:dialogTitle="Canvas Size Converting Option"
+                android:defaultValue="0" />
+        <ListPreference
+                android:key="samm_load_canvas_halign"
+                android:title="Load Canvas H-Align Option"
+                android:summary="Select Canvas H-Align Option"
+                android:entries="@array/load_canvas_halign"
+                android:entryValues="@array/list_value3"
+                android:dialogTitle="Canvas H-Align Option"
+                android:defaultValue="1" />
+        <ListPreference
+                android:key="samm_load_canvas_valign"
+                android:title="Load Canvas V-Align Option"
+                android:summary="Select Canvas V-Align Option"
+                android:entries="@array/load_canvas_valign"
+                android:entryValues="@array/list_value3"
+                android:dialogTitle="Canvas V-Align Option"
+                android:defaultValue="0" />
+        
+        <CheckBoxPreference
+                android:key="samm_save_crop_image_horizontal"
+                android:title="Save Image Horizontal Crop"
+                android:summary="OFF - Do not crop empty space of the left, right side of saving image"
+                android:defaultValue="false" />
+        
+        <CheckBoxPreference
+                android:key="samm_save_crop_image_vertical"
+                android:title="Save Image Vertical Crop"
+                android:summary="OFF - Do not crop empty space of the top, bottom side of saving image"
+                android:defaultValue="false" />
+        
+        <CheckBoxPreference
+                android:key="samm_save_crop_contents"
+                android:title="Adjust Saving Contents by Cropping"
+                android:summary="OFF - Do not adjust contents according to the cropped image"
+                android:defaultValue="true" />
+        
+        <ListPreference
+                android:key="samm_save_image_size"
+                android:title="Save Image Size"
+                android:summary="Select Save Image Size Option"
+                android:entries="@array/save_image_size"
+                android:entryValues="@array/save_image_size_value"
+                android:dialogTitle="Save Image Size Option"
+                android:defaultValue="1" />
+        
+        <ListPreference
+                android:key="samm_save_image_quality"
+                android:title="Save Image Quality"
+                android:summary="Select Save Image Quality"
+                android:entries="@array/save_image_quality"
+                android:entryValues="@array/save_image_quality_value"
+                android:dialogTitle="Save Image Quality"
+                android:defaultValue="1" />
+        
+         <CheckBoxPreference
+                android:key="samm_save_only_foreground_image"
+                android:title="Save Only Foreground Image"
+                android:summary="Save Only Foreground Image Off"
+                android:defaultValue="false" />
+                
+         <CheckBoxPreference
+                android:key="samm_save_create_new_image_file"
+                android:title="Create New Image File"
+                android:summary="Create New Image File On"
+                android:defaultValue="true" />
+                  
+         <CheckBoxPreference
+                android:key="samm_encode_foreground_image"
+                android:title="Encode Foreground Image"
+                android:summary="Encode Foreground Image On"
+                android:defaultValue="true" />
+         
+         <CheckBoxPreference
+                android:key="samm_encode_thumbnail_image"
+                android:title="Encode Thumbnail Image"
+                android:summary="Encode Thumbnail Image On"
+                android:defaultValue="true" />
+            
+    </PreferenceCategory>
+
+</PreferenceScreen>

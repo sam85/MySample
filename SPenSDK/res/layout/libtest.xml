@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/canvas_container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:gravity="top|center" android:background="#FF242424" android:clipChildren="true">
+	<ListView 
+		android:id="@+id/objectList"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"		
+   		android:cacheColorHint="#00000000"		
+		android:paddingTop="5dp"
+		android:paddingBottom="5dp"
+		android:paddingLeft="5dp"
+		android:paddingRight="5dp"/>
+</RelativeLayout>	   
+

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector android:id="@+id/myselector" xmlns:android="http://schemas.android.com/apk/res/android" >
+<item android:state_enabled="true" android:state_pressed="false" android:drawable="@drawable/tool_ic_colorpicker"/>
+<item android:state_enabled="true" android:state_pressed="true" android:drawable="@drawable/tool_ic_colorpicker_press"/>
+<item android:state_enabled="false" android:drawable="@drawable/tool_ic_colorpicker_dim"/>
+</selector>

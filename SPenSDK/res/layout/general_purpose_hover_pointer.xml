@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/cursor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="#FFFF0000"
+            android:gravity="center_horizontal"
+            android:text="Cursor Icon"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/split01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="#FFFFFF00"
+            android:gravity="center_horizontal"
+            android:text="SPLIT_01"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/split02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="#FFFFFFF0"
+            android:gravity="center_horizontal"
+            android:text="SPLIT_02"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/move"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="#FFFF00FF"
+            android:gravity="center_horizontal"
+            android:text="MOVE"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/resize01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="#FF00FF00"
+            android:gravity="center_horizontal"
+            android:text="RESIZE_01"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/resize02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="#FF00FFFF"
+            android:gravity="center_horizontal"
+            android:text="RESIZE_02"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/resize03"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="#FF223300"
+            android:gravity="center_horizontal"
+            android:text="RESIZE_03"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/resize04"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="#FFFF0000"
+            android:gravity="center_horizontal"
+            android:text="RESIZE_04"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/custom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center_horizontal"
+            android:text="CUSTOM BUTTON"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="ams_strarr_color">
+		<item>투명(PNG Format Only)</item>
+		<item>흰색</item>
+		<item>검은색</item>
+		<item>기타</item>
+	</string-array>
+	<string-array name="set_preference">
+		<item>보통</item>
+		<item>즐겨찾기</item>
+		<item>사용자설정</item>
+	</string-array>	
+	<string-array name="imageoperation">
+		<item>원본</item>
+		<item>그레이</item>
+		<item>세피아</item>
+		<item>반전</item>
+		<item>밝게</item>
+		<item>어둡게</item>		
+		<item>빈티지</item>
+		<item>오래된 사진</item>
+		<item>빛바램</item>
+		<item>비네팅</item>
+		<item>생동감</item>
+		<item>컬러화</item>
+		<item>블러링</item>
+		<item>연필 스케치</item>
+		<item>목탄 스케치</item>
+		<item>펜 스케치</item>
+		<item>파스텔 스케치</item>
+		<item>칼라 스케치</item>
+		<item>연필 파스텔 스케치</item>
+		<item>연필 칼라 스케치</item>	
+		<item>레트로</item>
+		<item>선샤인</item>
+		<item>다운라이트</item>
+		<item>블루와쉬</item>
+		<item>노스텔지아</item>
+		<item>옐로글로우</item>
+		<item>소프트글로우</item>		    
+		<item>모자이크</item>
+		<item>팝아트</item>
+		<item>마술펜</item>
+		<item>유화</item>
+		<item>포스터</item>
+		<item>카툰</item>
+		<item>클래식</item>			
+	</string-array>		
+	
+	<string-array name="imageoperation_simple">
+		<item>그레이</item>
+		<item>반전</item>
+		<item>어둡게</item>
+		<item>컬러화</item>
+		<item>블러링</item>
+		<item>연필 스케치</item>
+		<item>레트로</item>
+		<item>모자이크</item>
+		<item>마술펜</item>
+		<item>카툰</item>	
+	</string-array>		
+	
+	<string-array name="backgroundimageoperation">		
+		<item>그레이</item>
+		<item>세피아</item>
+		<item>반전</item>
+		<item>밝게</item>
+		<item>어둡게</item>		
+		<item>빈티지</item>
+		<item>오래된 사진</item>
+		<item>빛바램</item>
+		<item>비네팅</item>
+		<item>생동감</item>
+		<item>컬러화</item>
+		<item>블러링</item>
+		<item>연필 스케치</item>
+		<item>목탄 스케치</item>
+		<item>펜 스케치</item>
+		<item>파스텔 스케치</item>
+		<item>칼라 스케치</item>
+		<item>연필 파스텔 스케치</item>
+		<item>연필 칼라 스케치</item>	
+		<item>레트로</item>
+		<item>선샤인</item>
+		<item>다운라이트</item>
+		<item>블루와쉬</item>
+		<item>노스텔지아</item>
+		<item>옐로글로우</item>
+		<item>소프트글로우</item>		    
+		<item>모자이크</item>
+		<item>팝아트</item>
+		<item>마술펜</item>
+		<item>유화</item>
+		<item>포스터</item>
+		<item>카툰</item>
+		<item>클래식</item>			
+	</string-array>		
+	<string-array name="imageoperation_level">
+		<item>아주 약함</item>
+		<item>약함</item>
+		<item>중간</item>
+		<item>강함</item>
+		<item>매우 강함</item>
+	</string-array>
+	
+	<string-array name="popup_menu_image">
+        <item>삭제</item>
+        <item>회전</item>  
+        <item>복사하기</item>
+        <item>잘라내기</item>
+    </string-array>
+    <string-array name="popup_menu_image_with_paste">
+        <item>삭제</item>
+        <item>회전</item>  
+        <item>복사하기</item>
+        <item>잘라내기</item>
+        <item>붙여넣기</item>
+        <item>클립보드 비우기</item>
+    </string-array>
+    <string-array name="popup_menu_text">
+        <item>삭제</item>
+        <item>복사하기</item>
+        <item>잘라내기</item>
+    </string-array>
+    <string-array name="popup_menu_text_with_paste">
+        <item>삭제</item>
+        <item>복사하기</item>
+        <item>잘라내기</item>
+        <item>붙여넣기</item>
+        <item>클립보드 비우기</item>
+    </string-array>
+	<string-array name="popup_menu_else_with_paste">
+        <item>붙여넣기</item>
+        <item>클립보드 비우기</item>
+    </string-array>
+    <string-array name="load_canvas_size">
+        <item>현재 캔버스 크기에 맞춤</item>
+        <item>현재 캔버스 내부로 맞춤</item>
+        <item>원본 캔버스 크기 유지</item>  
+    </string-array>
+    <string-array name="load_canvas_halign">
+        <item>좌측 정렬</item>
+        <item>중간 정렬</item>
+        <item>우측 정렬</item>  
+    </string-array>
+    <string-array name="load_canvas_valign">
+        <item>상단 정렬</item>
+        <item>중앙 정렬</item>
+        <item>하단 정렬</item>  
+    </string-array>
+	<string-array name="save_image_size">
+        <item>원본 크기</item>
+        <item>중간 크기</item>
+        <item>작은 크기</item>
+        <item>썸네일 크기</item>  
+    </string-array>
+	<string-array name="save_image_quality">
+        <item>최상 품질</item>
+        <item>중간 품질</item>
+        <item>최하 품질</item>
+        <item>원본 품질</item>
+    </string-array>
+	<string-array name="animation_speed">
+        <item>느림</item>
+        <item>보통</item>
+        <item>빠름</item>
+        <item>아주 빠름</item>
+        <item>자동</item>                
+    </string-array>
+    <string-array name="signature_threshold">
+        <item>낮음</item>
+        <item>중간</item>
+        <item>높음</item>
+    </string-array>
+    
+    <string-array name="hover_pointer_style">
+	    <item>없음</item>
+	    <item>기본 제공 아이콘 </item>
+	    <item>사용자 정의 Drawable</item>
+	    <item>S Pen SDK 스타일</item>
+	    <item>S-Note 스타일</item>
+	</string-array>
+	<string-array name="side_button_style">
+	    <item>펜 설정 변경</item>
+	    <item>설정창 보이기</item>
+	</string-array>
+</resources>
+
+
+

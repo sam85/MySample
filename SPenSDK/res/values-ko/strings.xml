@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="animation_speed_title">애니메이션 속도</string>
+
+<!--Settings -->
+    <string name="pen_settings">펜 설정</string>
+    <string name="pen_settings_preset_empty">기본 설정 없음</string>
+    <string name="pen_settings_preset_delete_title">삭제</string>
+    <string name="pen_settings_preset_delete_msg">선택된 펜 기본 설정이 영구적으로 삭제됩니다.</string>
+    <string name="pen_settings_preset_exist">이미 저장되어 있습니다</string>
+    <string name="pen_settings_preset_maximum_msg">프리셋 최대 등록 갯수(12개)에 도달했습니다.</string>
+    <string name="eraser_settings">지우개 설정</string>
+    <string name="clear_all">모두 삭제</string>
+    <string name="text_settings">텍스트 설정</string>
+    <string name="text_settings_tab_font">서체</string>
+    <string name="text_settings_tab_paragraph">단락</string>
+    <string name="text_settings_tab_paragraph_align">정렬</string>
+    <string name="textbox_hint">텍스트 입력</string>
+    <string name="filling_settings">채우기 설정</string>
+    <string name="settingview_close_btn_desc">종료</string>
+    
+<!-- Signature -->
+    <string name="signature_start_check_title">[등록된 서명 확인]</string>
+    <string name="signature_start_check_sub_title">등록된 서명이 존재 하는지 확인합니다</string>
+    <string name="signature_start_check_success">등록된 서명이 존재 합니다</string>
+    <string name="signature_start_check_failure">등록된 서명이 없습니다</string>
+    <string name="signature_start_registration_title">[서명 등록]</string>
+    <string name="signature_start_registration_sub_title">서명 등록을 시작 합니다</string>
+    <string name="signature_start_verification_title">[서명 인증]</string>
+    <string name="signature_start_verification_sub_title">서명 인증을 시작 합니다 등록된 서명이 존재 해야 합니다</string>
+    <string name="signature_start_verification_failure">등록된 서명이 없습니다</string>
+    <string name="signature_start_delete_title">[서명 삭제]</string>
+    <string name="signature_start_delete_sub_title">등록된 서명을 삭제 합니다</string>
+    <string name="signature_start_delete_failure">등록된 서명이 삭제 되었습니다</string>
+    <string name="signature_start_delete_success">등록된 서명이 없습니다</string>
+    <string name="signature_registration_registration_title">[서명 저장]</string>
+    <string name="signature_registration_registration_sub_title">서명 등록을 위해 작성한 서명을 저장합니다</string>
+    <string name="signature_registration_registration_success_1">첫번째 서명이 저장되었습니다</string>
+    <string name="signature_registration_registration_success_2">두번째 서명이 저장되었습니다</string>
+    <string name="signature_registration_registration_success_3">서명 등록이 완료 되었습니다</string>
+    <string name="signature_registration_registration_failure">등록할 서명이 적합하지 않습니다\n다시 입력해 주세요!</string>    
+    <string name="signature_registration_draw">등록을 위해 서명 입력을 해주세요</string>
+    <string name="signature_verification_verification_title">[서명인증]</string>
+    <string name="signature_verification_verification_sub_title">서명을 인증 합니다</string>
+    <string name="signature_verification_verification_success">인증 성공!</string>
+    <string name="signature_verification_verification_failure">인증 실패!</string>
+    <string name="signature_verification_level_title">[서명인증 레벨]</string>
+    <string name="signature_verification_level_sub_title">인증 레벨을 선택하세요</string>
+    <string name="signature_verification_level_low">낮음</string>
+    <string name="signature_verification_level_medium">중간</string>
+    <string name="signature_verification_level_high">높음</string>
+    <string name="signature_verification_level_confirm">확인</string>
+    <string name="signature_verification_level_cancel">취소</string>
+    <string name="signature_verification_draw">인증을 위해 서명 입력을 해주세요</string>
+    <string name="signature_retry_title">[재 입력]</string>
+    <string name="signature_retry_sub_title">재 입력을 위하여 화면을 지웁니다</string>        
+<!-- User font -->
+    <string name="user_font_name1">초코쿠키</string>
+    <string name="user_font_name2">로즈마리</string>  
+    
+<!-- SAMM Option -->    
+	<string name="save_image_horizontal_crop_off">OFF - 저장할 이미지의 왼쪽, 오른쪽 빈 공간을 자르지 않는다</string>
+	<string name="save_image_horizontal_crop_on">ON - 저장할 이미지의 왼쪽, 오른쪽 빈 공간을 자른다</string>
+	<string name="save_image_vertical_crop_off">OFF - 저장할 이미지의 위, 아래 빈 공간을 자르지 않는다</string>
+	<string name="save_image_vertical_crop_on">ON - 저장할 이미지의 위, 아래 빈 공간을 자른다</string>
+	<string name="adjust_saving_contents_by_cropping_off">OFF - 잘라진 이미지에 맞게 데이터 내용(좌표 등)을 조정하지 않는다</string>
+	<string name="adjust_saving_contents_by_cropping_on">ON - 잘라진 이미지에 맞게 데이터 내용(좌표 등)을 조정한다</string>	
+	<string name="save_only_foreground_image_off">OFF - 전경과 배경을 함께 이미지로 저장한다</string>
+	<string name="save_only_foreground_image_on">ON - 전경만 이미지로 저장한다(투명 배경)</string>
+	<string name="create_new_image_off">OFF - 존재하는 파일에 SAMM 데이터를 저장한다</string>
+	<string name="create_new_image_on">ON - 새로운 이미지 파일을 만들어서 SAMM 데이터를 저장한다</string>
+	<string name="encode_foreground_image_off">OFF - 전경 이미지를 인코딩하지 않는다</string>
+	<string name="encode_foreground_image_on">ON - 전경 이미지를 인코딩한다</string>
+	<string name="encode_thumbnail_image_off">OFF - 썸네일 이미지를 인코딩하지 않는다</string>
+	<string name="encode_thumbnail_image_on">ON - 썸네일 이미지를 인코딩한다</string>
+	
+<!-- Animation Option -->
+	<string name="play_animation_using_trasparent_background_off">OFF - 배경과 함께 애니메이션 재생</string>	
+	<string name="play_animation_using_trasparent_background_on">ON - 배경 없이 애니메이션을 재생(투명)</string>
+	<string name="background_audio_play_off">OFF - 배경 오디오를 끔</string>
+	<string name="background_audio_play_on">ON - 배경 오디오를 켬</string>
+	<string name="background_audio_auto_replay_off">OFF - 배경 오디오를 한번만 재생</string>
+	<string name="background_audio_auto_replay_on">ON - 배경 오디오 반복 재생</string>
+	<string name="background_audio_stop_off">OFF - 애니메이션에 관계없이 배경 오디오를 재생</string>
+	<string name="background_audio_stop_on">ON - 애니메이션이 멈추면 배경오디오도 멈춤</string>
+	<string name="play_animation_using_sound_effect_off">OFF - 오디오 없이 애니메이션을 재생한다</string>
+	<string name="play_animation_using_sound_effect_on">ON - 오디오와 함께 애니메이션을 재생한다</string>
+	
+	<string name="hover_popup_window">The minimal organic design of the Samsung GALAXY S III is reflected in its smooth curves</string>
+</resources>

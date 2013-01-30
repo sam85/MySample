@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="match_parent">
+	
+	<LinearLayout
+	    android:id="@+id/tool_menu"
+		android:orientation="horizontal"
+		android:layout_gravity="top|right"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+		
+		<ImageView
+            android:id="@+id/penBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dip"
+            android:layout_weight="1"
+            android:background="@drawable/selector_tool_bg"
+            android:src="@drawable/selector_pen" />
+
+        <ImageView
+            android:id="@+id/eraseBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dip"
+            android:layout_weight="1"
+            android:background="@drawable/selector_tool_bg"
+            android:src="@drawable/selector_eraser" />
+
+        <ImageView
+            android:id="@+id/textBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dip"
+            android:layout_weight="1"
+            android:background="@drawable/selector_tool_bg"
+            android:src="@drawable/selector_text" />
+
+        <ImageView
+            android:id="@+id/undoBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dip"
+            android:layout_weight="1"
+            android:background="@drawable/selector_tool_bg"
+            android:src="@drawable/selector_undo" />
+
+        <ImageView
+            android:id="@+id/redoBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dip"
+            android:layout_weight="1"
+            android:background="@drawable/selector_tool_bg"
+            android:src="@drawable/selector_redo" />
+
+	</LinearLayout>	
+		
+	<FrameLayout 
+		android:id="@+id/layout_container"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+		<LinearLayout 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+			<RelativeLayout 
+			android:id="@+id/canvas_container"
+			android:layout_width="wrap_content"
+			android:layout_height="0dip"
+			android:background="#ffffffff"
+			android:layout_weight="1">
+			<com.samsung.spensdk.SCanvasView 
+				android:id="@+id/canvas_view"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_horizontal" />
+			</RelativeLayout>
+		<LinearLayout
+			android:orientation="horizontal" 
+			android:layout_width="match_parent"
+			android:layout_height="50dip"
+			>
+			<ImageView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="#ffededed"
+				android:layout_weight="1"
+				/>
+			<Button
+				android:id="@+id/panUp"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/up"
+				android:textSize="25sp"
+				android:layout_weight="1"
+				/>
+			<ImageView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="#ffededed"
+				android:layout_weight="1"
+				/>
+		</LinearLayout>
+		<LinearLayout
+			android:orientation="horizontal" 
+			android:layout_width="match_parent"
+			android:layout_height="50dip"
+			>
+			<Button
+				android:id="@+id/panLeft"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/left"
+				android:textSize="25sp"
+				android:layout_weight="1"
+				/>
+			<TextView
+				android:id="@+id/zoomScale"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:layout_weight="1"
+				/>
+			<Button
+				android:id="@+id/panRight"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/right"
+				android:textSize="25sp"
+				android:layout_weight="1"
+				/>
+		</LinearLayout>
+		<LinearLayout
+			android:orientation="horizontal" 
+			android:layout_width="match_parent"
+			android:layout_height="50dip"
+			>
+			<Button
+				android:id="@+id/zoomOut"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/minus"
+				android:textSize="25sp"
+				android:layout_weight="1"
+				/>
+			<Button
+				android:id="@+id/panDown"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/down"
+				android:textSize="25sp"
+				android:layout_weight="1"
+				/>
+			<Button
+				android:id="@+id/zoomIn"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/plus"
+				android:textSize="25sp"
+				android:layout_weight="1"
+				/>
+		</LinearLayout>
+	</LinearLayout>
+	</FrameLayout>    
+</LinearLayout>

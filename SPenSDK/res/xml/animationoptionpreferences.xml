@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2008 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!-- This is a primitive example showing the different types of preferences available. -->
+<PreferenceScreen
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <PreferenceCategory
+            android:title="SOptionPlay">
+            
+         <ListPreference
+                android:key="samm_animation_speed"
+                android:title="Speed of the Animation"
+                android:summary="Select Speed of the Animation"
+                android:entries="@array/animation_speed"
+                android:entryValues="@array/animation_speed_value"
+                android:dialogTitle="Select Animation Speed"
+                android:defaultValue="4" />
+        
+         <CheckBoxPreference
+                android:key="play_animation_using_transparent_background"
+                android:title="Play Animation Using Transparent Background"
+                android:summary="OFF - Play animation with its Background"
+                android:defaultValue="false" />
+         
+         <CheckBoxPreference
+                android:key="background_audio_play"
+                android:title="Background Audio Play"
+                android:summary="ON - Turn on the Background audio" 
+                android:defaultValue="true" />
+         
+          <CheckBoxPreference
+                android:key="background_audio_auto_replay"
+                android:title="Background Audio Auto Replay(Repeat)"
+                android:summary="OFF - Play background audio once"
+                android:defaultValue="false" />                        
+                            
+         <CheckBoxPreference
+                android:key="background_audio_play_stop"
+                android:title="Background Audio Stop"
+                android:summary="ON - Stop background audio when animation stop"
+                android:defaultValue="true" />
+                
+         <CheckBoxPreference
+                android:key="play_animation_using_sound_effect"
+                android:title="Play Animation Using Sound Effect"
+                android:summary="ON - Play animation with sound effect"
+                android:defaultValue="true" />
+            
+    </PreferenceCategory>
+        
+</PreferenceScreen>
