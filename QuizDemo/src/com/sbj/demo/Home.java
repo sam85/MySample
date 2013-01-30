@@ -14,6 +14,7 @@ import android.view.View.OnClickListener;
 import android.widget.TextView;
 
 public class Home extends Activity {
+	
 	private final String TAG = Home.class.getSimpleName();
 	TextView txtQuestion_FirstPart = null;
 	TextView txtOperator = null;
