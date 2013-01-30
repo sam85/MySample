@@ -11,6 +11,9 @@ import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class Home extends Activity {
@@ -38,6 +41,11 @@ public class Home extends Activity {
 	String Multiply = "MUL";
 	int CorrectAnsPosition = -1;
 	Handler handler = new Handler();
+	
+	LinearLayout linQuestion = null;
+	Animation anim_slide_in_up = null;
+	Animation anim_slide_out_up = null;
+	Animation anim_bounce_scale = null;
 
 	/** Called when the activity is first created. */
 	@Override
@@ -46,6 +54,7 @@ public class Home extends Activity {
 		this.setContentView(R.layout.main);
 		init();
 		SetQuestionAndOptions();
+		
 	}
 
 	private void init() {
@@ -62,6 +71,7 @@ public class Home extends Activity {
 		
 		txtQuestion_equal = (TextView) findViewById(R.id.txtQuestion_equal);
 		txtQuestion_equal.setText("=");
+		
 
 		txtQuestion_FirstPart.setTypeface(font1);
 		// txtOperator.setTypeface(font1);
@@ -73,6 +83,11 @@ public class Home extends Activity {
 		txtOption4.setTypeface(font1);
 		txtMessage.setTypeface(font1);
 		// txtQuestion_equal.setTypeface(font1);
+		
+		linQuestion = (LinearLayout)findViewById(R.id.linearLayout1);
+		 anim_slide_in_up = AnimationUtils.loadAnimation(this, R.anim.slide_in_up);
+		 anim_slide_out_up = AnimationUtils.loadAnimation(this, R.anim.slide_out_up);
+		 anim_bounce_scale =  AnimationUtils.loadAnimation(this, R.anim.bounce_scale);
 
 		txtOption1.setOnClickListener(new OnClickListener() {
 			@Override
@@ -105,8 +120,10 @@ public class Home extends Activity {
 	}
 
 	private void SetQuestionAndOptions() {
+		
 		txtMessage.setVisibility(View.INVISIBLE);
 		txtAnswer.setVisibility(View.INVISIBLE);
+		
 		int Answer = 0;
 		int Opt = GenerateRandom(MinNumber, Operator.length - 1);
 		Log.e("Opt ", " : " + Opt);
@@ -166,6 +183,8 @@ public class Home extends Activity {
 		Options.clear();
 		OptionsPositions.clear();
 		
+		linQuestion.startAnimation(anim_slide_in_up);
+		
 		SetOptions(Answer);
 	
 	}
@@ -201,6 +220,11 @@ public class Home extends Activity {
 		txtOption2.setText(String.valueOf(Options.get(1)));
 		txtOption3.setText(String.valueOf(Options.get(2)));
 		txtOption4.setText(String.valueOf(Options.get(3)));
+		
+		txtOption1.startAnimation(anim_slide_in_up);
+		txtOption2.startAnimation(anim_slide_in_up);
+		txtOption3.startAnimation(anim_slide_in_up);
+		txtOption4.startAnimation(anim_slide_in_up);
 
 	}
 
@@ -239,17 +263,18 @@ public class Home extends Activity {
 			
 		}
 		
-		txtMessage.setVisibility(View.VISIBLE);
-	//	sleep(5000);
-	//	SetQuestionAndOptions(); // Update the UI
 		
+		txtMessage.setVisibility(View.VISIBLE);
+		txtMessage.startAnimation(anim_bounce_scale);
+	
 		
 		Thread thread = new Thread()
 		{
 		    @Override
 		    public void run() {
 		        try {		      
-		            	sleep(3000);
+		            	sleep(3000);		        
+		        		
 		            	handler.post(new Runnable() { // This thread runs in the UI
 		                    @Override
 		                    public void run() {
