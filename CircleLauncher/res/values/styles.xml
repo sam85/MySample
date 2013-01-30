@@ -1,0 +1,28 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppTheme" parent="android:Theme.Light" />
+
+    <style name="HomeTheme" parent="@android:style/Theme.Wallpaper.NoTitleBar"></style>
+    
+    <style name="Animation.Drawer" parent="@android:style/Animation.Translucent">
+        <item name="android:windowEnterAnimation">@anim/drawer_enter</item>
+        <item name="android:windowExitAnimation">@anim/drawer_exit</item>
+    </style>
+
+    <style name="LauncherTheme" parent="@android:style/Theme.Holo">
+        <item name="android:windowAnimationStyle">@style/Animation.Drawer</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowActionModeOverlay">true</item>
+    </style>
+
+    <style name="ListTheme" parent="@style/LauncherTheme">
+        <item name="@android:listSelector">@android:color/transparent</item>
+        <item name="@android:scrollbars">none</item>
+        <item name="@android:clipChildren">false</item>
+        <item name="@android:overScrollMode">never</item>
+        <item name="@android:divider">@null</item>
+    </style>
+
+</resources>

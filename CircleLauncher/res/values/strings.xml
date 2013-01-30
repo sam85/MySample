@@ -1,0 +1,24 @@
+<resources>
+
+    <string name="app_name">Circle Launcher</string>
+    <string name="title_activity_launcher">@string/app_name</string>
+    <string name="title_activity_home">@string/app_name</string>
+    <string name="label_package_name">Package</string>
+    <string name="label_version_name">Version name</string>
+    <string name="label_version_code">Version code</string>
+    <string name="label_target_sdk_version">Target SDK</string>
+    <string name="label_uid">UID</string>
+    <string name="menu_title_chooseapps">Choose apps</string>
+    <string name="menu_title_help">Help</string>
+    <string name="toast_unable_to_run_settings">Unable to run Settings Activity!</string>
+
+    <!-- HelpDialogFragment strings -->
+
+    <string name="dlg_help_title">Circle Launcher help</string>
+    <string name="dlg_help_item_run">\u25cf Click the app in the center to launch it</string>
+    <string name="dlg_help_item_click">\u25cf Click any other app to center the launcher on it</string>
+    <string name="dlg_help_item_hover">\u25cf Hover over an app to see its details</string>
+    <string name="dlg_help_item_stylus_button">\u25cf Press the stylus side button to open a popup window that allows to show more info about the app and to delete it</string>
+    <string name="dlg_help_item_choose_apps">\u25cf Select Choose apps from the options menu to select visible apps</string>
+
+</resources>

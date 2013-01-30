@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/circle_list_item_text_background"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:textAppearance="@android:style/TextAppearance.Large" />
+
+    <include
+        android:id="@+id/item_package_name"
+        layout="@layout/item_appdetails" />
+
+    <include
+        android:id="@+id/item_version_name"
+        layout="@layout/item_appdetails" />
+
+    <include
+        android:id="@+id/item_version_code"
+        layout="@layout/item_appdetails" />
+
+    <include
+        android:id="@+id/item_target_sdk_version"
+        layout="@layout/item_appdetails" />
+
+    <include
+        android:id="@+id/item_uid"
+        layout="@layout/item_appdetails" />
+
+</LinearLayout>
