@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg" >
+
+    <RelativeLayout
+        android:id="@+id/locateme_contacts_relTitleBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" >
+
+        <TextView
+            android:id="@+id/locateme_contacts_txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:ems="11"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="Select Contacts"
+            android:textColor="@color/White"
+            android:textSize="19.0dip" />
+
+        <Button
+            android:id="@+id/locateme_contacts_btnDone"
+            android:layout_width="60.0dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="5.0dip"
+            android:layout_marginTop="5.0dip"
+            android:background="@drawable/done_selector"
+            android:ellipsize="end"
+            android:ems="3"
+            android:gravity="center"
+            android:onClick="onButtonClick"
+            android:singleLine="true"
+            android:textColor="@*android:color/black" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_below="@+id/locateme_contacts_relTitleBar"
+        android:layout_marginTop="5.0dip"
+        android:background="@color/White" />
+
+    <RelativeLayout
+        android:id="@+id/locateme_contacts_relSearchBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/locateme_contacts_relTitleBar"
+        android:layout_marginTop="5.0dip" >
+
+        <EditText
+            android:id="@+id/locateme_contacts_edContacts"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:background="@drawable/searchbar_background"
+            android:drawableLeft="@drawable/search_icon"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:padding="8.0dip"
+            android:paddingLeft="5.0dip"
+            android:singleLine="true" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:layout_below="@+id/locateme_contacts_edContacts"
+            android:layout_marginTop="10.0dip"
+            android:background="@color/White" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/locateme_contacts_lstView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/locateme_contacts_relSearchBar"
+        android:cacheColorHint="@*android:color/transparent"
+        android:divider="@*android:color/transparent"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="true"
+        android:listSelector="@*android:color/transparent" />
+
+</RelativeLayout>

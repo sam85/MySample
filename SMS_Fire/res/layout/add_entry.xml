@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg" >
+
+    <RelativeLayout
+        android:id="@+id/addeventactivity_ll_header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header" >
+
+        <TextView
+            android:id="@+id/addeventactivity_tv_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10.0dip"
+            android:text="Add Entry"
+            android:textColor="@color/White"
+            android:textSize="18.0sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/parent_scrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/addeventactivity_ll_header"
+        android:layout_marginBottom="10.0dip" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip" >
+
+            <TextView
+                android:id="@+id/addeventactivity_tv_selectcontact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20.0dip"
+                android:text="Select Contact"
+                android:textColor="@color/White" />
+
+            <com.sbj.sms_fire.CustomAutoComplete
+                android:id="@+id/addeventactivity_et_to"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:layout_below="@id/addeventactivity_tv_selectcontact"
+                android:layout_marginTop="5.0dip"
+                android:layout_toLeftOf="@+id/add_event_btn_getContacts"
+                android:gravity="top|left|center"
+                android:hint="Enter Receipient"
+                android:lines="1"
+                android:scrollHorizontally="true"
+                android:textColor="#ff000000" />
+
+            <Button
+                android:id="@+id/add_event_btn_getContacts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/addeventactivity_et_to"
+                android:layout_alignBottom="@+id/addeventactivity_et_to"
+                android:layout_marginLeft="5.0dip"
+                android:layout_toLeftOf="@+id/add_event_btn_clearContacts"
+                android:background="@drawable/add_contact_selector" />
+
+            <Button
+                android:id="@+id/add_event_btn_clearContacts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/addeventactivity_et_to"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="5.0dip"
+                android:background="@drawable/delete_contact_selector" />
+
+            <TextView
+                android:id="@+id/addeventactivity_tv_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/addeventactivity_et_to"
+                android:layout_marginTop="10.0dip"
+                android:text="Message"
+                android:textColor="@color/White" />
+
+            <TextView
+                android:id="@+id/addeventactivity_tv_messagebodycount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/add_event_btn_clearContacts"
+                android:layout_marginTop="10.0dip"
+                android:singleLine="true"
+                android:textColor="@color/White" />
+
+            <EditText
+                android:id="@+id/addeventactivity_et_message"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/addeventactivity_tv_message"
+                android:layout_marginTop="5.0dip"
+                android:gravity="top"
+                android:hint="Enter Message"
+                android:imeOptions="actionDone"
+                android:inputType="textMultiLine"
+                android:isScrollContainer="true"
+                android:lines="6"
+                android:scrollbars="vertical" />
+
+            <TextView
+                android:id="@+id/addeventactivity_cm_interval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/addeventactivity_et_message"
+                android:layout_marginTop="20.0dip"
+                android:text="Interval Time : "
+                android:textColor="@color/White" />
+
+            <Spinner
+                android:id="@+id/interval_spinner"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/addeventactivity_et_message"
+                android:layout_toRightOf="@+id/addeventactivity_cm_interval" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/interval_spinner"
+                android:layout_marginTop="30.0dip"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/addeventactivity_btn_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Save" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
