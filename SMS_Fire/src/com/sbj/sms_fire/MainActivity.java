@@ -51,10 +51,32 @@ public class MainActivity extends Activity {
 				// TODO Auto-generated method stub
 				Intent localIntent = new Intent(getBaseContext(),
 						ContactsActivity.class);
-				localIntent.putExtra("SELECTED_ID", "");
+				localIntent.putExtra("SELECTED_ID",  edtContactInfo.getText().toString());
 				startActivityForResult(localIntent, 100);
 			}
 		});
 	}
+	
+	protected void onActivityResult(int paramInt1, int paramInt2, Intent paramIntent)
+	  {
+	    super.onActivityResult(paramInt1, paramInt2, paramIntent);
+	    if ((paramInt1 == 100) && (paramInt2 == -1))
+	    {
+	      String str1 = paramIntent.getExtras().getString("CONTACT_DATA");
+	      this.edtContactInfo.setText(str1);
+	      String str2 = this.edtContactInfo.getText().toString().trim();
+	      if ((str2 != null) && (!str2.equals("")))
+	      {
+	        String str3 = str2.replace(",,", ",");
+	        this.edtContactInfo.setText(str3);
+	        if (str3.charAt(0) == ',')
+	        {
+	          String str4 = str3.substring(1);
+	          this.edtContactInfo.setText(str4);
+	        }
+	        this.edtContactInfo.setSelection(this.edtContactInfo.getText().length());
+	      }
+	    }
+	  }
 
 }

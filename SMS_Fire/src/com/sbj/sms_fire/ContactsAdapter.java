@@ -53,34 +53,38 @@ public class ContactsAdapter extends BaseAdapter {
 		localTextView2.setText(localContactModel.getContactNumber());
 		
 		if (localContactModel.isSelectFlag())
-			localImageButton.setVisibility(0);
-		while (true) {
+			localImageButton.setVisibility(View.VISIBLE);
+		else
+			localImageButton.setVisibility(View.INVISIBLE);
+	
 			localImageButton.setOnClickListener(new View.OnClickListener() {
 				public void onClick(View paramAnonymousView) {
-					if (localImageButton.isShown()) {
+					if (localImageButton.isShown()) 
+					{
 						localContactModel.setSelectFlag(false);
-						localImageButton.setVisibility(4);
+						localImageButton.setVisibility(View.INVISIBLE);
 					}
-					while (true) {
+					else {
 						localContactModel.setSelectFlag(true);
-						localImageButton.setVisibility(0);
+						localImageButton.setVisibility(View.VISIBLE);
 					}
 				}
 			});
+			
 			paramView.setOnClickListener(new View.OnClickListener() {
 				public void onClick(View paramAnonymousView) {
 					if (localImageButton.isShown()) {
 						localContactModel.setSelectFlag(false);
-						localImageButton.setVisibility(4);
+						localImageButton.setVisibility(View.INVISIBLE);
 					}
-					while (true) {
+					else{
 						localContactModel.setSelectFlag(true);
-						localImageButton.setVisibility(0);
+						localImageButton.setVisibility(View.VISIBLE);
 					}
 				}
 			});
-			localImageButton.setVisibility(4);
+		
 			return paramView;
-		}
+		
 	}
 }

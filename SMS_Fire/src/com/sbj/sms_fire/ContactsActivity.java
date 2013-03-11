@@ -2,6 +2,7 @@ package com.sbj.sms_fire;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.StringTokenizer;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -71,25 +72,6 @@ public class ContactsActivity extends Activity {
 				new String[] { "_id", "display_name", "data1" }, null,
 				(String[]) null, "display_name COLLATE LOCALIZED ASC");
 
-		// try {
-		//
-		// String[] projection = new String[] {
-		// ContactsContract.Contacts.DISPLAY_NAME,
-		// ContactsContract.Contacts.HAS_PHONE_NUMBER,
-		// ContactsContract.Contacts._ID };
-		//
-		// Cursor cursor = managedQuery(ContactsContract.Contacts.CONTENT_URI,
-		// projection, ContactsContract.Contacts.HAS_PHONE_NUMBER
-		// + "=?", new String[] { "1" },
-		// ContactsContract.Contacts.DISPLAY_NAME);
-		//
-		// return cursor;
-		// } catch (Exception e) {
-		//
-		// e.printStackTrace();
-		// return null;
-		// }
-
 	}
 
 	private void initializeComponents() {
@@ -101,9 +83,25 @@ public class ContactsActivity extends Activity {
 		this.usersContactList = new StringBuilder();
 		String[] arrayOfString = this.selctedContacts.split(",");
 		this.lstSelectedContacts = new ArrayList();
+		int len = arrayOfString.length;
+		for (int i = 0; i < len; i++) {
+			StringTokenizer localStringTokenizer;
+			if ((arrayOfString[i].contains("<"))
+					&& (arrayOfString[i].contains(">"))) {
+				localStringTokenizer = new StringTokenizer(arrayOfString[i],
+						"<>");
+				if (localStringTokenizer.countTokens() == 2) {
+					localStringTokenizer.nextToken();
+					String str1 = localStringTokenizer.nextToken();
+					this.lstSelectedContacts.add(str1);
+				}
+			}
+		}
+
 		Cursor localCursor;
 
 		this.edContacts.addTextChangedListener(this.onSearchTextChange);
+
 		localCursor = getContacts();
 		Log.e("", "Count :" + localCursor.getCount());
 		localCursor.moveToFirst();
@@ -121,10 +119,10 @@ public class ContactsActivity extends Activity {
 
 			if (this.lstSelectedContacts.contains(str2))
 				localContactModel.setSelectFlag(true);
-			else {
-				this.arrListContactModel.add(localContactModel);
+			else
 				localContactModel.setSelectFlag(false);
-			}
+
+			this.arrListContactModel.add(localContactModel);
 
 			if (localCursor.isLast()) {
 				localCursor.close();
