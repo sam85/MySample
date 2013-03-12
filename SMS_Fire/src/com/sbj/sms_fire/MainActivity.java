@@ -28,6 +28,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.sbj.sms_fire.adapter.ContactListAutoAdapter;
+import com.sbj.sms_fire.constant.Constant;
 import com.sbj.sms_fire.dao.DBAdapter;
 import com.sbj.sms_fire.model.clsEntryModule;
 import com.sbj.sms_fire.view.CustomAutoComplete;
@@ -44,6 +45,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 	CustomAutoComplete edtContactInfo;
 	Spinner interval_spinner;
 	DBAdapter db;
+	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -189,13 +191,13 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 		}
 	}
 
-	private void setAlarm(int eventid, long timeinmillis) {
-		Intent intent = new Intent(this, ContactsList.class);
-		intent.putExtra("Event id", eventid);
+	private void setAlarm(int eventid, long timeinmillis , long RepeatTimeMills) {
+		Intent intent = new Intent(Constant.BROADCAST_ACTION);
+		intent.putExtra("Event_id", eventid);
 		PendingIntent pendingIntent = PendingIntent.getBroadcast(this, eventid,
 				intent, PendingIntent.FLAG_UPDATE_CURRENT);
 		AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
-		alarmManager.set(AlarmManager.RTC_WAKEUP, timeinmillis, pendingIntent);
+		alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, timeinmillis, RepeatTimeMills,pendingIntent);
 	}
 
 	private void showClearContactDialog() {
@@ -268,20 +270,74 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 	
 	private void SaveSmsEntry()
 	{
-		clsEntryModule objEntModule = new clsEntryModule(edtEventName.getText().toString().trim(),GetContactSplit(), 
-				edtMessageBody.getText().toString().trim(), interval_spinner.getSelectedItem().toString(),
+		String IntervalTime = interval_spinner.getSelectedItem().toString();
+		String contactData = edtContactInfo.getText().toString().trim();
+		clsEntryModule objEntModule = new clsEntryModule(edtEventName.getText().toString().trim(),
+				GetContactSplit(contactData), contactData,
+				edtMessageBody.getText().toString().trim(), IntervalTime,
 				MyFunction.GetCurrentDate("MM/dd/yyyy HH:mm:ss"));
 		db.open();
-		db.InsertEntry(objEntModule);
+		long EventID = db.InsertEntry(objEntModule);
 		db.close();	
 		showAlert(this, getString(R.string.AlertTitle),
 				getString(R.string.SaveData));
+		FindTimeForEvent(EventID,IntervalTime);
 	}
 	
-	private String GetContactSplit()
+	private void FindTimeForEvent(long EventID,String IntervalTime)
 	{
-		String ContactList = "";
-		String contactData = edtContactInfo.getText().toString().trim();
+		long timeinmillis = 0;
+		long repeatIntervalMills = ConvertIntervalMills(IntervalTime);
+		Calendar cal = Calendar.getInstance();
+		timeinmillis = cal.getTimeInMillis() + repeatIntervalMills;
+		setAlarm((int)EventID, timeinmillis,repeatIntervalMills);
+	}
+	
+	private long ConvertIntervalMills(String IntTime)
+	{
+		long intTime = 0;
+		if(IntTime.trim().equalsIgnoreCase("1 Min"))
+		{
+			intTime = 1000 * 60 * 1; 
+		}
+		else if(IntTime.trim().equalsIgnoreCase("2 Min"))
+		{
+			intTime = 1000 * 60 * 2; 
+		}
+		else if(IntTime.trim().equalsIgnoreCase("5 Min"))
+		{
+			intTime = 1000 * 60 * 5; 
+		}
+		else if(IntTime.trim().equalsIgnoreCase("10 Min"))
+		{
+			intTime = 1000 * 60 * 10; 
+		}
+		else if(IntTime.trim().equalsIgnoreCase("30 Min"))
+		{
+			intTime = 1000 * 60 * 30; 
+		}
+		else if(IntTime.trim().equalsIgnoreCase("1 Hour"))
+		{
+			intTime = 1000 * 60 * 60 * 1; 
+		}
+		else if(IntTime.trim().equalsIgnoreCase("5 Hour"))
+		{
+			intTime = 1000 * 60 * 60 * 5; 
+		}
+		else if(IntTime.trim().equalsIgnoreCase("EveryDay"))
+		{
+			intTime = 1000 * 60 * 60 * 24 * 1; 
+		}
+		else
+		{
+			intTime = 1000 * 60 * 60 * 24 * 5;  // Default 
+		}
+		return intTime;
+	}
+	
+	private String GetContactSplit(String contactData)
+	{
+		String ContactList = "";		
 		String[] tokens = contactData.split(",");
 		for (int i = 0; i < tokens.length; i++) {
 			

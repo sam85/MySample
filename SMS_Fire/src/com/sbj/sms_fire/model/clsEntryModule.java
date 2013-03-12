@@ -5,6 +5,7 @@ public class clsEntryModule {
 	int intGlCode;
 	String EventName;
 	String Contacts;
+	String ContactsWithName;
 	String Message;
 	String IntervalTime;
 	String EntryDate;
@@ -13,11 +14,12 @@ public class clsEntryModule {
 		return intGlCode;
 	}
 
-	public clsEntryModule(String  EventNam ,String contacts, String message,
+	public clsEntryModule(String  EventNam ,String contacts,String ContactsWithNam, String message,
 			String intervalTime, String entryDate) {
 		super();	
 		EventName = EventNam;
 		Contacts = contacts;
+		ContactsWithName =ContactsWithNam;
 		Message = message;
 		IntervalTime = intervalTime;
 		EntryDate = entryDate;
@@ -43,6 +45,15 @@ public class clsEntryModule {
 	public void setContacts(String contacts) {
 		Contacts = contacts;
 	}
+	public String getContactsWithName() {
+		return ContactsWithName;
+	}
+
+	public void setContactsWithName(String ContactsWithName) {
+		this.ContactsWithName = ContactsWithName;
+	}
+	
+	
 
 	public String getMessage() {
 		return Message;

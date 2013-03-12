@@ -11,6 +11,6 @@ public class BootBroadcastReceiver extends BroadcastReceiver {
 	@Override
 	public void onReceive(Context context, Intent intent) {
 
-	Log.e("SMS_FIRE"," : "+intent.getAction());
+	Log.e("BootBroadcastReceiver SMS_FIRE"," : "+intent.getAction());
 	}
 }

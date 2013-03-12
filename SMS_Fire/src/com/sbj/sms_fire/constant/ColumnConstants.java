@@ -7,6 +7,7 @@ public enum ColumnConstants {
 	COLUMN_intGlCode("intGlCode" , Constant.version),
 	COLUMN_varEventName("varEventName" , Constant.version),
 	COLUMN_varContacts("varContacts" , Constant.version),
+	COLUMN_varContactsWithName("varContactsWithName" , Constant.version),
 	COLUMN_varMessage("varMessage" , Constant.version),
 	COLUMN_varIntervalTime("varIntervalTime" , Constant.version),
 	COLUMN_varEntryDate("varEntryDate" , Constant.version);

@@ -42,6 +42,16 @@
                 <action android:name="android.intent.action.QUICKBOOT_POWERON" />
             </intent-filter>
         </receiver>
+        
+        <receiver
+            android:name=".receiver.SMSBroadcastReceiver"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="com.sbj.sms_fire.SMS_SEND_ACT" />
+            </intent-filter>
+        </receiver>
+        
+        
     </application>
 
 </manifest>

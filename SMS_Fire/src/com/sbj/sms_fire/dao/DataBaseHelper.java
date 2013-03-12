@@ -26,6 +26,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 			+ " Integer Primary Key,"
 			+ ColumnConstants.COLUMN_varEventName.getColumnName() + " Text ,"
 			+ ColumnConstants.COLUMN_varContacts.getColumnName() + " Text ,"
+			+ ColumnConstants.COLUMN_varContactsWithName.getColumnName() + " Text ,"
 			+ ColumnConstants.COLUMN_varMessage.getColumnName() + " Text ,"
 			+ ColumnConstants.COLUMN_varIntervalTime.getColumnName() + " Text ,"
 			+ ColumnConstants.COLUMN_varEntryDate.getColumnName() + " Text)";

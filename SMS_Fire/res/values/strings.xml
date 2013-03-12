@@ -21,7 +21,7 @@
         <item>30 Min</item>
         <item>1 Hour</item>
         <item>5 Hour</item>
-        <item>1 Day</item>
+        <item>EveryDay</item>
     </string-array>
 
 </resources>

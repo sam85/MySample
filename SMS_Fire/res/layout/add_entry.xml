@@ -33,16 +33,16 @@
             android:layout_height="wrap_content"
             android:paddingLeft="10.0dip"
             android:paddingRight="10.0dip" >
-            
-             <TextView
+
+            <TextView
                 android:id="@+id/addeventactivity_tv_eventname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20.0dip"
                 android:text="Event Name: "
                 android:textColor="@color/White" />
-             
-               <EditText
+
+            <EditText
                 android:id="@+id/addeventactivity_et_eventname"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -51,16 +51,16 @@
                 android:layout_toRightOf="@+id/addeventactivity_tv_eventname"
                 android:gravity="top|left|center"
                 android:hint="Enter Event Name"
+                android:imeOptions="actionNext"
                 android:lines="1"
                 android:scrollHorizontally="true"
                 android:textColor="#ff000000" />
-             
 
             <TextView
                 android:id="@+id/addeventactivity_tv_selectcontact"
-                android:layout_below="@+id/addeventactivity_tv_eventname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/addeventactivity_tv_eventname"
                 android:layout_marginTop="20.0dip"
                 android:text="Select Contact"
                 android:textColor="@color/White" />
@@ -74,6 +74,7 @@
                 android:layout_toLeftOf="@+id/add_event_btn_getContacts"
                 android:gravity="top|left|center"
                 android:hint="Enter Receipient"
+                android:imeOptions="actionNext"
                 android:lines="1"
                 android:scrollHorizontally="true"
                 android:textColor="#ff000000" />
@@ -110,9 +111,9 @@
                 android:id="@+id/addeventactivity_tv_messagebodycount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/addeventactivity_tv_message"
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/add_event_btn_clearContacts"
-                android:layout_alignBaseline="@+id/addeventactivity_tv_message"
                 android:layout_marginTop="10.0dip"
                 android:singleLine="true"
                 android:textColor="@color/White" />

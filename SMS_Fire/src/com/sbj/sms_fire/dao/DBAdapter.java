@@ -63,10 +63,12 @@ public class DBAdapter {
 	 * @param clsEntryModule
 	 *            Object of Class
 	 */
-	public void InsertEntry(clsEntryModule objclsEntryModule) {
+	public long  InsertEntry(clsEntryModule objclsEntryModule) {
 		ContentValues cv = new ContentValues();
 		cv.put(ColumnConstants.COLUMN_varContacts.getColumnName(),
 				objclsEntryModule.getContacts());
+		cv.put(ColumnConstants.COLUMN_varContactsWithName.getColumnName(),
+				objclsEntryModule.getContactsWithName());
 		cv.put(ColumnConstants.COLUMN_varEventName.getColumnName(),
 				objclsEntryModule.getEventName());
 		cv.put(ColumnConstants.COLUMN_varMessage.getColumnName(),
@@ -75,8 +77,9 @@ public class DBAdapter {
 				objclsEntryModule.getIntervalTime());
 		cv.put(ColumnConstants.COLUMN_varEntryDate.getColumnName(),
 				objclsEntryModule.getEntryDate());
-		db.insert(TableConstants.TABLE_SmsFire.getTableName(),
+		long id = db.insert(TableConstants.TABLE_SmsFire.getTableName(),
 				ColumnConstants.COLUMN_intGlCode.getColumnName(), cv);
+		return id;
 	}
 
 }
