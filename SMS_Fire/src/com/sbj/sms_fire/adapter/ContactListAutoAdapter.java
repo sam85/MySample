@@ -43,47 +43,5 @@ public class ContactListAutoAdapter extends CursorAdapter implements Filterable 
 		return paramCursor.getString(i) + "<" + paramCursor.getString(j) + ">";
 	}
 
-	public View newView(Context paramContext, Cursor paramCursor,
-			ViewGroup paramViewGroup) {
-		LinearLayout localLinearLayout = (LinearLayout) LayoutInflater.from(
-				paramContext).inflate(R.layout.autofillcontact, paramViewGroup, false);
-		int i = paramCursor.getColumnIndex("display_name");
-		int j = paramCursor.getColumnIndex("data1");
-		TextView localTextView1 = (TextView) localLinearLayout
-				.findViewById(R.id.txtAutoCName);
-		TextView localTextView2 = (TextView) localLinearLayout
-				.findViewById(R.id.txtAutoCNumber);
-		localTextView1.setText(paramCursor.getString(i));
-		localTextView2.setText("<" + paramCursor.getString(j) + ">");
-		return localLinearLayout;
-	}
-
-	public Cursor runQueryOnBackgroundThread(CharSequence paramCharSequence) {
-		Cursor localCursor;
-		if (getFilterQueryProvider() != null) {
-			localCursor = getFilterQueryProvider().runQuery(paramCharSequence);
-			return localCursor;
-		}
-		String[] arrayOfString1 = (String[]) null;
-		StringBuilder localStringBuilder = null;
-		if (paramCharSequence != null) {
-			localStringBuilder = new StringBuilder();
-			localStringBuilder.append("UPPER(");
-			localStringBuilder.append("display_name");
-			localStringBuilder.append(") GLOB ?");
-			arrayOfString1 = new String[1];
-			arrayOfString1[0] = (paramCharSequence.toString().toUpperCase() + "*");
-		}
-		String[] arrayOfString2 = { "_id", "display_name", "data1", "data2" };
-		ContentResolver localContentResolver = this.mContent;
-		Uri localUri = ContactsContract.CommonDataKinds.Phone.CONTENT_URI;
-		
-		if(localStringBuilder == null)
-			return null;
-		
-		localCursor = localContentResolver.query(localUri, arrayOfString2,
-				localStringBuilder.toString(), arrayOfString1, null);
-		return localCursor;
-		
-	}
+	
 }
