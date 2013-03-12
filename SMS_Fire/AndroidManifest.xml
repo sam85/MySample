@@ -10,6 +10,8 @@
 
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" >
+    </uses-permission>
 
     <application
         android:allowBackup="true"
@@ -26,11 +28,20 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ContactsActivity"
+            android:name=".ContactsList"
             android:screenOrientation="portrait"
             android:theme="@*android:style/Theme.Dialog" />
 
-        <service android:name=".BroadcastService" />
+        <service android:name="com.sbj.sms_fire.receiver.BroadcastService" />
+
+        <receiver
+            android:name=".receiver.BootBroadcastReceiver"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

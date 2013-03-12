@@ -33,16 +33,39 @@
             android:layout_height="wrap_content"
             android:paddingLeft="10.0dip"
             android:paddingRight="10.0dip" >
+            
+             <TextView
+                android:id="@+id/addeventactivity_tv_eventname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20.0dip"
+                android:text="Event Name: "
+                android:textColor="@color/White" />
+             
+               <EditText
+                android:id="@+id/addeventactivity_et_eventname"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5.0dip"
+                android:layout_toRightOf="@+id/addeventactivity_tv_eventname"
+                android:gravity="top|left|center"
+                android:hint="Enter Event Name"
+                android:lines="1"
+                android:scrollHorizontally="true"
+                android:textColor="#ff000000" />
+             
 
             <TextView
                 android:id="@+id/addeventactivity_tv_selectcontact"
+                android:layout_below="@+id/addeventactivity_tv_eventname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20.0dip"
                 android:text="Select Contact"
                 android:textColor="@color/White" />
 
-            <com.sbj.sms_fire.CustomAutoComplete
+            <com.sbj.sms_fire.view.CustomAutoComplete
                 android:id="@+id/addeventactivity_et_to"
                 android:layout_width="fill_parent"
                 android:layout_height="40.0dip"

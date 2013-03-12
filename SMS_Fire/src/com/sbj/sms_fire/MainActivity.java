@@ -1,5 +1,8 @@
 package com.sbj.sms_fire;
 
+import java.util.Calendar;
+import java.util.StringTokenizer;
+
 import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.AlertDialog;
@@ -24,25 +27,45 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.sbj.sms_fire.adapter.ContactListAutoAdapter;
+import com.sbj.sms_fire.dao.DBAdapter;
+import com.sbj.sms_fire.model.clsEntryModule;
+import com.sbj.sms_fire.view.CustomAutoComplete;
+import com.vcs.function.MyFunction;
+
 public class MainActivity extends Activity implements OnItemSelectedListener {
 
 	EditText edtMessageBody;
+	EditText edtEventName;
 	TextView txtMessageCount;
 	Button btnClearContacts;
 	Button btnSaveSchedule;
 	Button btn_getContacts;
 	CustomAutoComplete edtContactInfo;
 	Spinner interval_spinner;
+	DBAdapter db;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.add_entry);
+		CreateDatabase();
 		init();
+	}
+	
+	private void CreateDatabase() {
+		try {	
+			db = new DBAdapter(this);
+			db.createDatabase();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}		
 	}
 
 	private void init() {
-
+	
+		edtEventName = (EditText)findViewById(R.id.addeventactivity_et_eventname);
 		edtMessageBody = (EditText) findViewById(R.id.addeventactivity_et_message);
 		txtMessageCount = (TextView) findViewById(R.id.addeventactivity_tv_messagebodycount);
 		edtMessageBody.addTextChangedListener(countTextWatcher);
@@ -82,7 +105,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
 				Intent localIntent = new Intent(getBaseContext(),
-						ContactsActivity.class);
+						ContactsList.class);
 				localIntent.putExtra("SELECTED_ID", edtContactInfo.getText()
 						.toString());
 				startActivityForResult(localIntent, 100);
@@ -91,6 +114,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 
 		interval_spinner = (Spinner) findViewById(R.id.interval_spinner);
 		SetSpinnerData();
+		
 	}
 
 	private void SetSpinnerData() {
@@ -116,7 +140,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 				+ " COLLATE LOCALIZED ASC";
 		Cursor cContacts = managedQuery(uri, projection, null, selectionArgs,
 				sortOrder);
-		ContactListAdapter adapter = new ContactListAdapter(this, cContacts);
+		ContactListAutoAdapter adapter = new ContactListAutoAdapter(this, cContacts);
 
 		edtContactInfo.setAdapter(adapter);
 	}
@@ -166,7 +190,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 	}
 
 	private void setAlarm(int eventid, long timeinmillis) {
-		Intent intent = new Intent(this, ContactsActivity.class);
+		Intent intent = new Intent(this, ContactsList.class);
 		intent.putExtra("Event id", eventid);
 		PendingIntent pendingIntent = PendingIntent.getBroadcast(this, eventid,
 				intent, PendingIntent.FLAG_UPDATE_CURRENT);
@@ -205,18 +229,28 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 		// Validations for different fields.
 		// Validations Starts...
 
-		if (strMsg == null || strMsg.equals("")) {
-			flag = false;
-			showAlert(this, getString(R.string.AlertTitle),
-					getString(R.string.enterMsg));
-			edtMessageBody.requestFocus();
-
-		} else if (contactData == null || contactData.equals("")) {
+		 if(edtEventName == null || edtEventName.equals("")) {
+				flag = false;
+				showAlert(this, getString(R.string.AlertTitle),
+						getString(R.string.enterEventName));
+				edtEventName.requestFocus();
+			}
+		 else if (contactData == null || contactData.equals("")) {
 			flag = false;
 			showAlert(this, getString(R.string.AlertTitle),
 					getString(R.string.enterContactNumber));
 			edtContactInfo.requestFocus();
 
+		}else if (strMsg == null || strMsg.equals("")) {
+			flag = false;
+			showAlert(this, getString(R.string.AlertTitle),
+					getString(R.string.enterMsg));
+			edtMessageBody.requestFocus();
+
+		}
+		else
+		{
+			SaveSmsEntry();
 		}
 		// else if (!validateContactNumber()) {
 		// flag = false;
@@ -230,6 +264,84 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 		// }
 
 		// Validations Ends...
+	}
+	
+	private void SaveSmsEntry()
+	{
+		clsEntryModule objEntModule = new clsEntryModule(edtEventName.getText().toString().trim(),GetContactSplit(), 
+				edtMessageBody.getText().toString().trim(), interval_spinner.getSelectedItem().toString(),
+				MyFunction.GetCurrentDate("MM/dd/yyyy HH:mm:ss"));
+		db.open();
+		db.InsertEntry(objEntModule);
+		db.close();	
+		showAlert(this, getString(R.string.AlertTitle),
+				getString(R.string.SaveData));
+	}
+	
+	private String GetContactSplit()
+	{
+		String ContactList = "";
+		String contactData = edtContactInfo.getText().toString().trim();
+		String[] tokens = contactData.split(",");
+		for (int i = 0; i < tokens.length; i++) {
+			
+			if (tokens[i].contains("<") && tokens[i].contains(">")) {
+
+				StringTokenizer stringTokenizer = new StringTokenizer(
+						tokens[i], "<>");
+
+				if (stringTokenizer.countTokens() == 2) {
+
+					String name = stringTokenizer.nextToken();
+					String number = stringTokenizer.nextToken();
+//					if (lstSelectedConatcs.contains(number)) {
+//						continue;
+//					} else {
+//						lstSelectedConatcs.add(number);
+					  if(ContactList.length() > 0)
+						ContactList +=  ", "+number;
+					  else
+						  ContactList += number;
+//					}
+
+				} else if (stringTokenizer.countTokens() > 0) {
+
+					String strData = stringTokenizer.nextToken().toString();
+					if(ContactList.length() > 0)
+					ContactList += ", "+strData;
+					else
+						ContactList += strData;
+							
+
+//					if ((isNumber(strData))) {
+//						if (lstSelectedConatcs.contains(strData)) {
+//							continue;
+//						} else {
+//							eventContactModel.setContactName("");
+//							eventContactModel.setContactNumber(strData);
+//							lstSelectedConatcs.add(strData);
+//						}
+//
+//					} else {
+//						flagAlert = false;
+//					}
+				}
+			} else {
+				if(ContactList.length() > 0)
+				ContactList += ", "+tokens[i];
+				else
+					ContactList += tokens[i];
+//				if ((isNumber(tokens[i]))) {
+//					// its number only
+//					eventContactModel.setContactName("");
+//					eventContactModel.setContactNumber(tokens[i]);
+//				}
+			}
+
+			
+		}
+		Log.e("ContactList "," : "+ContactList);
+		return ContactList;
 	}
 
 	public void showAlert(Context mContext, String title, String message) {
