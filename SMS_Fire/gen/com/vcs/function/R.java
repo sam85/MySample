@@ -8,11 +8,11 @@ package com.vcs.function;
 
 public final class R {
 	public static final class id {
-		public static final int ok = 0x7f0b0022;
-		public static final int cancel = 0x7f0b0021;
-		public static final int dialog_message = 0x7f0b0020;
-		public static final int dialog_title = 0x7f0b001f;
-		public static final int menu_settings = 0x7f0b0023;
+		public static final int ok = 0x7f0a0029;
+		public static final int cancel = 0x7f0a0028;
+		public static final int dialog_message = 0x7f0a0027;
+		public static final int dialog_title = 0x7f0a0026;
+		public static final int menu_settings = 0x7f0a002a;
 	}
 	public static final class anim {
 		public static final int fadeout = 0x7f040002;
@@ -44,19 +44,19 @@ public final class R {
 		public static final int hello_world = 0x7f070001;
 	}
 	public static final class menu {
-		public static final int activity_main = 0x7f0a0000;
+		public static final int activity_main = 0x7f0d0000;
 	}
 	public static final class layout {
-		public static final int r_okcanceldialogview = 0x7f030006;
-		public static final int r_okdialogview = 0x7f030007;
+		public static final int r_okcanceldialogview = 0x7f030007;
+		public static final int r_okdialogview = 0x7f030008;
 	}
 	public static final class drawable {
 		public static final int alert = 0x7f020003;
-		public static final int focused = 0x7f02000d;
-		public static final int ic_launcher = 0x7f020010;
+		public static final int focused = 0x7f020015;
+		public static final int ic_launcher = 0x7f020018;
 		public static final int custom_button1 = 0x7f020006;
-		public static final int ic_action_search = 0x7f02000f;
-		public static final int nofocused = 0x7f020011;
+		public static final int ic_action_search = 0x7f020017;
+		public static final int nofocused = 0x7f020019;
 		public static final int custom_button = 0x7f020005;
 	}
 	public static final class dimen {

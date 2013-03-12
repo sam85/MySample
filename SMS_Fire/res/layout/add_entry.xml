@@ -3,29 +3,13 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/bg" >
-
-    <RelativeLayout
-        android:id="@+id/addeventactivity_ll_header"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/header" >
-
-        <TextView
-            android:id="@+id/addeventactivity_tv_header"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_marginLeft="10.0dip"
-            android:text="Add Entry"
-            android:textColor="@color/White"
-            android:textSize="18.0sp" />
-    </RelativeLayout>
+  
 
     <ScrollView
         android:id="@+id/parent_scrollView"
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
-        android:layout_below="@id/addeventactivity_ll_header"
+        android:layout_marginTop="10dp"
         android:layout_marginBottom="10.0dip" >
 
         <RelativeLayout
@@ -68,7 +52,7 @@
             <com.sbj.sms_fire.view.CustomAutoComplete
                 android:id="@+id/addeventactivity_et_to"
                 android:layout_width="fill_parent"
-                android:layout_height="40.0dip"
+                android:layout_height="50.0dip"
                 android:layout_below="@id/addeventactivity_tv_selectcontact"
                 android:layout_marginTop="5.0dip"
                 android:layout_toLeftOf="@+id/add_event_btn_getContacts"

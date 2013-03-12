@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
@@ -80,6 +81,21 @@ public class DBAdapter {
 		long id = db.insert(TableConstants.TABLE_SmsFire.getTableName(),
 				ColumnConstants.COLUMN_intGlCode.getColumnName(), cv);
 		return id;
+	}
+	
+	
+	/**
+	 * Get Event Data From Database
+	 * 
+	 * @return Return Cursor Object of the Result Set.
+	 */
+	public Cursor getEventData(int Event_ID) {
+		Cursor c = db.rawQuery("Select * from "
+				+ TableConstants.TABLE_SmsFire.getTableName() + " where intGlCode = "+Event_ID, null);
+		if (c != null && c.getCount() > 0) {
+			c.moveToFirst();
+		}
+		return c;
 	}
 
 }
