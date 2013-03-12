@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
 import android.provider.ContactsContract;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +20,7 @@ public class ContactListAdapter extends CursorAdapter implements Filterable {
 	public ContactListAdapter(Context paramContext, Cursor paramCursor) {
 		super(paramContext, paramCursor);
 		this.mContent = paramContext.getContentResolver();
+		Log.e("paramCursor "," : "+paramCursor.getCount());
 	}
 
 	public void bindView(View paramView, Context paramContext,
@@ -71,13 +73,13 @@ public class ContactListAdapter extends CursorAdapter implements Filterable {
 		String[] arrayOfString2 = { "_id", "display_name", "data1", "data2" };
 		ContentResolver localContentResolver = this.mContent;
 		Uri localUri = ContactsContract.CommonDataKinds.Phone.CONTENT_URI;
-		if (localStringBuilder == null)
-			;
-		for (String str = null;; str = localStringBuilder.toString()) {
-			localCursor = localContentResolver.query(localUri, arrayOfString2,
-					str, arrayOfString1, null);
-			return localCursor;
-		}
+		
+		if(localStringBuilder == null)
+			return null;
+		
+		localCursor = localContentResolver.query(localUri, arrayOfString2,
+				localStringBuilder.toString(), arrayOfString1, null);
+		return localCursor;
 		
 	}
 }
